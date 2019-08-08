@@ -1,2 +1,3 @@
 # react-snippets
-React Snippets
+
+React Snippets in TypeScript.

@@ -1,0 +1,33 @@
+{
+  "name": "@hocs/prevent-handlers-default",
+  "version": "0.4.0",
+  "description": "Prevent handlers default HOC for React and React Native",
+  "keywords": [
+    "react",
+    "react-native",
+    "hoc",
+    "recompose",
+    "sideeffects"
+  ],
+  "main": "build/node-cjs/index.js",
+  "browser": "build/browser-esm/index.js",
+  "react-native": "build/react-native/index.js",
+  "files": [
+    "build/"
+  ],
+  "repository": "deepsweet/hocs",
+  "author": "Kir Belevich <kir@belevi.ch> (https://github.com/deepsweet)",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/deepsweet/hocs/blob/master/license.md"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "dependencies": {
+    "react-display-name": "^0.2.4"
+  }
+}

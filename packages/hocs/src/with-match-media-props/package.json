@@ -1,0 +1,33 @@
+{
+  "name": "@hocs/with-match-media-props",
+  "version": "0.4.0",
+  "description": "CSS Media Queries HOC for React",
+  "keywords": [
+    "react",
+    "hoc",
+    "recompose",
+    "matchmedia",
+    "mediaqueries"
+  ],
+  "main": "build/node-cjs/index.js",
+  "browser": "build/browser-esm/index.js",
+  "files": [
+    "build/"
+  ],
+  "repository": "deepsweet/hocs",
+  "author": "Kir Belevich <kir@belevi.ch> (https://github.com/deepsweet)",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/deepsweet/hocs/blob/master/license.md"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "json2mq": "^0.2.0",
+    "react-display-name": "^0.2.4"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
+  }
+}

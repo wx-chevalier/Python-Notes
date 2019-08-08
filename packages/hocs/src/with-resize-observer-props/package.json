@@ -1,0 +1,35 @@
+{
+  "name": "@hocs/with-resize-observer-props",
+  "version": "0.5.0",
+  "description": "Resize Observer HOC for React",
+  "keywords": [
+    "react",
+    "hoc",
+    "recompose",
+    "resize",
+    "resizeobserver"
+  ],
+  "main": "build/node-cjs/index.js",
+  "browser": "build/browser-esm/index.js",
+  "files": [
+    "build/"
+  ],
+  "repository": "deepsweet/hocs",
+  "author": "Kir Belevich <kir@belevi.ch> (https://github.com/deepsweet)",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/deepsweet/hocs/blob/master/license.md"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": "^16.3.0"
+  },
+  "devDependencies": {
+    "resize-observer-polyfill": "^1.5.0"
+  },
+  "dependencies": {
+    "react-display-name": "^0.2.4"
+  }
+}
