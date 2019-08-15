@@ -1,3 +1,5 @@
+![](https://i.postimg.cc/0NXHs82R/image.png)
+
 # react-snippets
 
 React Snippets in TypeScript. 该项目承接自 [fe-boilerplates](https://github.com/wx-chevalier/fe-boilerplates)。
