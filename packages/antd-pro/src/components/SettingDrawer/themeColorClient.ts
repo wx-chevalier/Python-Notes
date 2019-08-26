@@ -13,6 +13,7 @@ export default {
     const colorPalettes = generate(color);
     return lightens.concat(colorPalettes);
   },
+
   changeColor(color?: string): Promise<void> {
     if (!color) {
       return Promise.resolve();

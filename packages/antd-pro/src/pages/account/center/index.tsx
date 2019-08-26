@@ -64,10 +64,7 @@ interface CenterState {
     currentUserLoading: loading.effects['accountCenter/fetchCurrent'],
   }),
 )
-class Center extends PureComponent<
-  CenterProps,
-  CenterState
-> {
+class Center extends PureComponent<CenterProps, CenterState> {
   // static getDerivedStateFromProps(
   //   props: accountCenterProps,
   //   state: accountCenterState,

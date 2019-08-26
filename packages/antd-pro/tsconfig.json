@@ -15,6 +15,7 @@
     "noUnusedLocals": true,
     "allowJs": true,
     "experimentalDecorators": true,
+    "resolveJsonModule": true,
     "strict": true,
     "paths": {
       "@/*": ["./src/*"]
