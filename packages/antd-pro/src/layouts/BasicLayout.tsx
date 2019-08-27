@@ -101,6 +101,7 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
       <ProLayout
         logo={logo}
         onCollapse={handleMenuCollapse}
+        menuDataRender={menuDataRender}
         menuItemRender={(menuItemProps, defaultDom) => {
           if (menuItemProps.isUrl) {
             return defaultDom;
@@ -127,7 +128,6 @@ const BasicLayout: React.FC<BasicLayoutProps> = props => {
           );
         }}
         footerRender={footerRender}
-        menuDataRender={menuDataRender}
         formatMessage={formatMessage}
         rightContentRender={rightProps => <RightContent {...rightProps} />}
         {...props}

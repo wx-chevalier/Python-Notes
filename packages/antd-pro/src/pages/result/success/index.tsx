@@ -45,7 +45,9 @@ const content = (
         23421
       </Descriptions.Item>
       <Descriptions.Item
-        label={<FormattedMessage id="result-success.success.principal" defaultMessage="Principal：" />}
+        label={
+          <FormattedMessage id="result-success.success.principal" defaultMessage="Principal：" />
+        }
       >
         <FormattedMessage id="result-success.success.step1-operator" defaultMessage="Qu Lili" />
       </Descriptions.Item>
@@ -65,7 +67,10 @@ const content = (
       <Step
         title={
           <span style={{ fontSize: 14 }}>
-            <FormattedMessage id="result-success.success.step1-title" defaultMessage="Create project" />
+            <FormattedMessage
+              id="result-success.success.step1-title"
+              defaultMessage="Create project"
+            />
           </span>
         }
         description={desc1}
