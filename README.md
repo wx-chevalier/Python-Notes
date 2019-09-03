@@ -2,7 +2,7 @@
 
 # react-snippets
 
-React Snippets in TypeScript. 该项目承接自 [fe-boilerplates](https://github.com/wx-chevalier/fe-boilerplates)。
+React Snippets in TypeScript, 该项目承接自 [fe-boilerplates](https://github.com/wx-chevalier/fe-boilerplates)，其配套书籍参阅 [React 实战](https://ngte-web.gitbook.io/i/react/react)。
 
 # Nav | 导航
 
