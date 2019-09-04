@@ -60,7 +60,7 @@ function safeMap(state: any, fn: any, action: any, name: any) {
   }
 }
 
-export function handle(startingState: any, action: FsaAction, handlers: HandlerMap) {
+export function handle(startingState: any, action: any, handlers: HandlerMap) {
   if (process.env.NODE_ENV === 'development') {
     verifyHandlers(handlers, action);
   }
