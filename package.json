@@ -84,6 +84,7 @@
   },
   "private": true,
   "workspaces": [
-    "./packages/antd-intl"
+    "./packages/antd-intl",
+    "./packages/redux-pack-fsa"
   ]
 }
