@@ -2,13 +2,13 @@
 
 Sensible promise handling and FSA-compliant middleware for redux
 
-`redux-pack` is a library that introduces promise-based middleware that allows async actions based on the lifecycle of a promise to be declarative.
+`redux-pack-fsa` is a library that introduces promise-based middleware that allows async actions based on the lifecycle of a promise to be declarative.
 
 Async actions in redux are often done using `redux-thunk` or other middlewares. The problem with this approach is that it makes it too easy to use `dispatch` sequentially, and dispatch multiple "actions" as the result of the same interaction/event, where they probably should have just been a single action dispatch.
 
 This can be problematic because we are treating several dispatches as all part of a single transaction, but in reality, each dispatch causes a separate rerender of the entire component tree, where we not only pay a huge performance penalty, but also risk the redux store being in an inconsistent state.
 
-`redux-pack` helps prevent us from making these mistakes, as it doesn't give us the power of a `dispatch` function, but allows us to do all of the things we were doing before.
+`redux-pack-fsa` helps prevent us from making these mistakes, as it doesn't give us the power of a `dispatch` function, but allows us to do all of the things we were doing before.
 
 To give you some more context into the changes, here are some examples/information about the old way and new way of doing things below:
 
@@ -83,9 +83,9 @@ switch (type) {
 }
 ```
 
-### Data fetching with redux-pack (new way)
+### Data fetching with redux-pack-fsa (new way)
 
-With redux-pack, we only need to define a single action constant for the entire promise lifecycle, and then return the promise directly with a `promise` namespace specified:
+With redux-pack-fsa, we only need to define a single action constant for the entire promise lifecycle, and then return the promise directly with a `promise` namespace specified:
 
 ```js
 // types.js
@@ -102,11 +102,11 @@ export function loadFoo(id) {
 }
 ```
 
-In the reducer, you handle the action with redux-pack's `handle` function, where you can specify several smaller "reducer" functions for each lifecycle. `finish` is called for both resolving/rejecting, `start` is called at the beginning, `success` is called on resolve, `failure` is called on reject, and `always` is called for all of them.
+In the reducer, you handle the action with redux-pack-fsa's `handle` function, where you can specify several smaller "reducer" functions for each lifecycle. `finish` is called for both resolving/rejecting, `start` is called at the beginning, `success` is called on resolve, `failure` is called on reject, and `always` is called for all of them.
 
 ```js
 // reducer.js
-import { handle } from 'redux-pack';
+import { handle } from 'redux-pack-fsa';
 
 export function fooReducer(state = initialState, action) {
   const { type, payload } = action;
@@ -166,23 +166,23 @@ export function loadFoo(id) {
 
 ### Install
 
-The first step is to add `redux-pack` in your project
+The first step is to add `redux-pack-fsa` in your project
 
 ```sh
-npm install -S redux-pack
+npm install -S redux-pack-fsa
 
 # or
 
-yarn add redux-pack
+yarn add redux-pack-fsa
 ```
 
 ### Setup the middleware
 
-The `redux-pack` middleware is the heart of `redux-pack`. As the following example shows, it installs like most middlewares:
+The `redux-pack-fsa` middleware is the heart of `redux-pack-fsa`. As the following example shows, it installs like most middlewares:
 
 ```js
 import { createStore, applyMiddleware } from 'redux';
-import { middleware as reduxPackMiddleware } from 'redux-pack';
+import { middleware as reduxPackMiddleware } from 'redux-pack-fsa';
 import thunk from 'redux-thunk';
 import createLogger from 'redux-logger';
 import rootReducer from './reducer';
@@ -209,7 +209,7 @@ As you can see, it takes 3 arguments:
 Here is a minimalist example:
 
 ```js
-import { handle } from 'redux-pack';
+import { handle } from 'redux-pack-fsa';
 import { getFoo } from '../api/foo';
 
 const LOAD_FOO = 'LOAD_FOO';
@@ -249,7 +249,7 @@ export function loadFoo() {
 
 You might want to add side effects (like sending analytics events or navigate to different views) based on promise results.
 
-`redux-pack` lets you do that through event hooks functions. These are functions attached to the `meta` attribute of the original action. They are called with two parameters:
+`redux-pack-fsa` lets you do that through event hooks functions. These are functions attached to the `meta` attribute of the original action. They are called with two parameters:
 
 1. the matching step payload (varies based on the step, details below)
 2. the `getState` function
@@ -287,7 +287,7 @@ export function userDoesFoo() {
 
 ### Testing
 
-At the moment, testing reducers and action creators with `redux-pack` does
+At the moment, testing reducers and action creators with `redux-pack-fsa` does
 require understanding a little bit about its implementation. The `handle`
 method uses a special `KEY.LIFECYCLE` property on the `meta` object on the
 action that denotes the lifecycle of the promise being handled.
@@ -296,7 +296,7 @@ Right now it is suggested to make a simple helper method to make testing
 easier. Simple test code might look something like this:
 
 ```js
-import { LIFECYCLE, KEY } from 'redux-pack';
+import { LIFECYCLE, KEY } from 'redux-pack-fsa';
 import FooReducer from '../path/to/FooReducer';
 
 // this utility method will make an action that redux pack understands
