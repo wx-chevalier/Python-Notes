@@ -2,6 +2,7 @@ import * as deline from 'deline';
 import invariant from 'invariant';
 
 import { KEY, LIFECYCLE } from './constants';
+import { FsaAction } from './middleware';
 
 const VALID_KEYS = {
   start: true,
@@ -10,6 +11,14 @@ const VALID_KEYS = {
   finish: true,
   always: true
 };
+
+export interface HandlerMap {
+  start?: Function;
+  success?: Function;
+  failure?: Function;
+  finish?: Function;
+  always?: Function;
+}
 
 function verifyHandlers(handlers: any, action: any) {
   Object.keys(handlers).forEach(key => {
@@ -51,7 +60,7 @@ function safeMap(state: any, fn: any, action: any, name: any) {
   }
 }
 
-export function handle(startingState: any, action: any, handlers: any) {
+export function handle(startingState: any, action: FsaAction, handlers: HandlerMap) {
   if (process.env.NODE_ENV === 'development') {
     verifyHandlers(handlers, action);
   }

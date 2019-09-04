@@ -1,6 +1,6 @@
 {
   "name": "redux-pack-fsa",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "redux-pack-fsa",
   "repository": {
     "type": "git",
@@ -27,7 +27,7 @@
   },
   "scripts": {
     "clean": "rimraf dist",
-    "build": "npm run build:es && npm run build:cjs && npm run build:umd",
+    "build": "npm run clean && npm run build:es && npm run build:cjs && npm run build:umd",
     "build:es": "tsc --project ./tsconfig.es.json",
     "build:cjs": "tsc --project ./tsconfig.cjs.json",
     "dev": "tsc -w --project ./tsconfig.es.json",
