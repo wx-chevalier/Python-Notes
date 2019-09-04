@@ -15,7 +15,6 @@ export const decrementAsync = createAction(DECREMENT, async delta => {
 export default handleActions(
   {
     [INCREMENT]: (state, action) => state + action.payload,
-
     [DECREMENT]: (state, action) => state - action.payload
   },
   10
