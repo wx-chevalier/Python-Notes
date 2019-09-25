@@ -59,7 +59,7 @@ function handlePromise(dispatch: Function, getState: Function, action: FsaAction
     return { payload: data };
   };
 
-  const failure = (error: any) => {
+  const failure = (error: Error) => {
     dispatch({
       type,
       payload: error,
@@ -71,6 +71,14 @@ function handlePromise(dispatch: Function, getState: Function, action: FsaAction
         [KEY.TRANSACTION]: transactionId
       }
     });
+
+    if (
+      (process && process.env && process.env.NODE_ENV === 'development') ||
+      process.env.NODE_ENV === 'dev'
+    ) {
+      console.error(error);
+    }
+
     handleEventHook(meta, 'onFailure', error, getState);
     handleEventHook(meta, 'onFinish', false, getState);
     return { error: true, payload: error };
