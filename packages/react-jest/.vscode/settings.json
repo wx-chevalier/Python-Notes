@@ -22,5 +22,6 @@
     "mjolnirjs",
     "repo",
     "unpkg"
-  ]
+  ],
+  "eslint.enable": true
 }
