@@ -7,7 +7,7 @@ function promiseMiddleware() {
 
       const { promise, types, ...rest } = action; // eslint-disable-line no-redeclare
 
-      //判断是否存在Promise对象
+      // 判断是否存在 Promise 对象
       if (!promise) {
         return next(action);
       }
