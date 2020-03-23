@@ -2,7 +2,6 @@ import { applyMiddleware, createStore } from 'redux';
 import thunk from 'redux-thunk';
 import createSagaMiddleware from 'redux-saga';
 
-// import promiseMiddleware from './middleware/promiseMiddleware'; // 使用自定义版本的 promiseMiddleware
 import promiseMiddleware from 'redux-promise';
 
 // 从总的 reducers 文件中获取所有的 Reducer
