@@ -32,9 +32,9 @@
 
 Here's a blank template to get started:
 **To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`wx-chevalier`, `repo`, `twitter_handle`, `email`
+`wx-chevalier`, `Python-Series`, `twitter_handle`, `email`
 
-> 本书的精排目录导航版请参考 [https://ng-tech.icu/repo](https://ng-tech.icu/repo)。
+> 本书的精排目录导航版请参考 [https://ng-tech.icu/Python-Series](https://ng-tech.icu/Python-Series)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Series)。
 
 # Nav | 导读
 
