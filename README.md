@@ -12,14 +12,14 @@
   </a>
 
   <p align="center">
-    <a href="https://github.com/wx-chevalier/Python-Series"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/wx-chevalier/Python-Series"><strong>在线阅读</strong></a>
     <br />
     <br />
-    <a href="https://github.com/wx-chevalier/Python-Series">View Demo</a>
+    <a href="https://github.com/wx-chevalier/Python-Series">速览手册</a>
     ·
-    <a href="https://github.com/wx-chevalier/Python-Series/issues">Report Bug</a>
+    <a href="https://github.com/wx-chevalier/Python-Series/issues">代码实践</a>
     ·
-    <a href="https://github.com/wx-chevalier/Python-Series/issues">Request Feature</a>
+    <a href="https://github.com/wx-chevalier/Python-Series/issues">参考资料</a>
 
   </p>
 </p>
@@ -30,9 +30,7 @@
 
 [![Product Name Screen Shot](https://s2.ax1x.com/2020/01/06/lr2YdJ.md.png)](https://example.com)
 
-Here's a blank template to get started:
-**To avoid retyping too much info. Do a search and replace with your text editor for the following:**
-`wx-chevalier`, `Python-Series`, `twitter_handle`, `email`
+正所谓，人生苦短，请用 Python，本篇着眼介绍 Python 的基础语法、数据结构、工程实践以及并发优化等相关内容。
 
 > 本书的精排目录导航版请参考 [https://ng-tech.icu/Python-Series](https://ng-tech.icu/Python-Series)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Series)。
 
