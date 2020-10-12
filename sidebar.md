@@ -25,8 +25,8 @@
   - 并发编程
     - Actor
       - [Ray](/并发编程/Actor/Ray.md)
-    - 线程
-      - [线程](/并发编程/线程/线程.md)
+    - [线程](/并发编程/线程/README.md)
+      - [ThreadLocal](/并发编程/线程/ThreadLocal.md)
     - 进程
       - [进程](/并发编程/进程/进程.md)
     - 锁
