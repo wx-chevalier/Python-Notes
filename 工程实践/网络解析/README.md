@@ -22,7 +22,7 @@ tree = html.fromstring(page.text)
 
 XPath 是一种在结构化文档（如 HTML 或 XML）中定位信息的方式。一个关于 XPath 的 不错的介绍参见 [W3Schools](http://www.w3schools.com/xml/xpath_intro.asp) 。
 
-有很多工具可以获取元素的 XPath，如 Firefox 的 FireBug 或者 Chrome 的 Inspector。 如果您使用 Chrome，您可以右键元素，选择 'Inspect element'，高亮这段代码， 再次右击，并选择 'Copy XPath'。
+有很多工具可以获取元素的 XPath，如 Firefox 的 FireBug 或者 Chrome 的 Inspector。如果您使用 Chrome，您可以右键元素，选择 'Inspect element'，高亮这段代码， 再次右击，并选择 'Copy XPath'。
 
 在进行一次快速分析后，我们看到在页面中的数据保存在两个元素中，一个是 title 是 'buyer-name' 的 div，另一个 class 是 'item-price' 的 span：
 
