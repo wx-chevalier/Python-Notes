@@ -11,7 +11,7 @@ from lxml import html
 import requests
 ```
 
-下一步我们将使用 `requests.get` 来从 web 页面中取得我们的数据， 通过使用 `html` 模块解析它，并将结果保存到 `tree` 中。
+下一步我们将使用 `requests.get` 来从 web 页面中取得我们的数据，通过使用 `html` 模块解析它，并将结果保存到 `tree` 中。
 
 ```
 page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
@@ -22,7 +22,7 @@ tree = html.fromstring(page.text)
 
 XPath 是一种在结构化文档（如 HTML 或 XML）中定位信息的方式。一个关于 XPath 的 不错的介绍参见 [W3Schools](http://www.w3schools.com/xml/xpath_intro.asp) 。
 
-有很多工具可以获取元素的 XPath，如 Firefox 的 FireBug 或者 Chrome 的 Inspector。如果您使用 Chrome，您可以右键元素，选择 'Inspect element'，高亮这段代码， 再次右击，并选择 'Copy XPath'。
+有很多工具可以获取元素的 XPath，如 Firefox 的 FireBug 或者 Chrome 的 Inspector。如果您使用 Chrome，您可以右键元素，选择 'Inspect element'，高亮这段代码，再次右击，并选择 'Copy XPath'。
 
 在进行一次快速分析后，我们看到在页面中的数据保存在两个元素中，一个是 title 是 'buyer-name' 的 div，另一个 class 是 'item-price' 的 span：
 
@@ -31,7 +31,7 @@ XPath 是一种在结构化文档（如 HTML 或 XML）中定位信息的方式�
 <span class="item-price">$29.95</span>
 ```
 
-知道这个后，我们可以创建正确的 XPath 查询并且使用 lxml 的 `xpath` 函数， 像下面这样：
+知道这个后，我们可以创建正确的 XPath 查询并且使用 lxml 的 `xpath` 函数，像下面这样：
 
 ```py
 #这将创建buyers的列表：
@@ -57,4 +57,4 @@ Prices:  ['$29.95', '$8.37', '$15.26', '$19.25', '$19.25',
 '$15.00', '$114.07', '$10.09']
 ```
 
-恭喜！我们已经成功地通过 lxml 与 Request，从一个 web 页面中抓取了所有我们想要的 数据。我们将它们以列表的形式存在内存中。现在我们可以对它做各种很酷的事情了： 我们可以使用 Python 分析它，或者我们可以将之保存为一个文件并向世界分享。
+恭喜！我们已经成功地通过 lxml 与 Request，从一个 web 页面中抓取了所有我们想要的 数据。我们将它们以列表的形式存在内存中。现在我们可以对它做各种很酷的事情了：我们可以使用 Python 分析它，或者我们可以将之保存为一个文件并向世界分享。
