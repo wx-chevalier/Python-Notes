@@ -30,15 +30,13 @@
 
 [![Product Name Screen Shot](https://s2.ax1x.com/2020/01/06/lr2YdJ.md.png)](https://example.com)
 
-正所谓，人生苦短，请用 Python，本篇着眼介绍 Python 的基础语法、数据结构、工程实践以及并发优化等相关内容。
-
-> 本书的精排目录导航版请参考 [https://ng-tech.icu/Python-Series](https://ng-tech.icu/Python-Series)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Series)。
-
-# Nav | 导读
-
 Python 诞生于 1989 年的圣诞期间，由 Guido van Rossum 开发而成，目前 Guido 仍然是 Python 的主要开发者，主导着 Python 的发展方向。Python 是一门面向对象，解释型的高级程序设计语言，它的语法非常简洁、优雅，而这也是 Python 的一些设计哲学。Python 自带了很完善的库，涵盖了数据库，网络，文件处理，GUI 等方方面面，通过这些库，我们可以比较快速地解决一些棘手问题，也可以将其作为基础库，开发出一些高级库。
 
-Python 也有一些缺点。Python 经常被人们吐槽的一点就是：运行速度慢，和 C/C++ 相比非常慢。但是，除了像视频高清解码等计算密集型任务对运行速度有较高的要求外，在大部分时候，我们可能并不需要非常快的运行速度。
+Python 也有一些缺点。Python 经常被人们吐槽的一点就是：运行速度慢，和 C/C++ 相比非常慢。但是，除了像视频高清解码等计算密集型任务对运行速度有较高的要求外，在大部分时候，我们可能并不需要非常快的运行速度。正所谓，人生苦短，请用 Python，本篇着眼介绍 Python 的基础语法、数据结构、工程实践以及并发优化等相关内容。
+
+## Nav | 导读
+
+- 本书的精排目录导航版请参考 [https://ng-tech.icu/Python-Series](https://ng-tech.icu/Python-Series)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Series)。
 
 # About | 关于
 
