@@ -34,7 +34,7 @@ Python 诞生于 1989 年的圣诞期间，由 Guido van Rossum 开发而成，�
 
 Python 也有一些缺点。Python 经常被人们吐槽的一点就是：运行速度慢，和 C/C++ 相比非常慢。但是，除了像视频高清解码等计算密集型任务对运行速度有较高的要求外，在大部分时候，我们可能并不需要非常快的运行速度。正所谓，人生苦短，请用 Python，本篇着眼介绍 Python 的基础语法、数据结构、工程实践以及并发优化等相关内容。
 
-## Nav | 导读
+## Nav | 关联导航
 
 - 本书的精排目录导航版请参考 [https://ng-tech.icu/Python-Series](https://ng-tech.icu/Python-Series)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Series)。
 
