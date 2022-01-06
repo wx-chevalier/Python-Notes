@@ -115,14 +115,14 @@ result = ray.get(values[0])
 ```py
 @ray.remote
 class Counter(object):
- def __init__(self):
- self.x = 0
+ def __init__(self):
+ self.x = 0
 
- def inc(self):
- self.x += 1
+ def inc(self):
+ self.x += 1
 
- def get_value(self):
- return self.x
+ def get_value(self):
+ return self.x
 
 # Create an actor process.
 c = Counter.remote()
@@ -147,25 +147,25 @@ import time
 
 @ray.remote
 class MessageActor(object):
- def __init__(self):
- self.messages = []
+ def __init__(self):
+ self.messages = []
 
- def add_message(self, message):
- self.messages.append(message)
+ def add_message(self, message):
+ self.messages.append(message)
 
- def get_and_clear_messages(self):
- messages = self.messages
- self.messages = []
- return messages
+ def get_and_clear_messages(self):
+ messages = self.messages
+ self.messages = []
+ return messages
 
 # Define a remote function which loops around and pushes
 # messages to the actor.
 @ray.remote
 def worker(message_actor, j):
- for i in range(100):
- time.sleep(1)
- message_actor.add_message.remote(
- "Message {} from actor {}.".format(i, j))
+ for i in range(100):
+ time.sleep(1)
+ message_actor.add_message.remote(
+ "Message {} from actor {}.".format(i, j))
 
 # Create a message actor.
 message_actor = MessageActor.remote()
@@ -175,9 +175,9 @@ message_actor = MessageActor.remote()
 
 # Periodically get the messages and print them.
 for _ in range(100):
- new_messages = ray.get(message_actor.get_and_clear_messages.remote())
- print("New messages:", new_messages)
- time.sleep(1)
+ new_messages = ray.get(message_actor.get_and_clear_messages.remote())
+ print("New messages:", new_messages)
+ time.sleep(1)
 
 # This script prints something like the following:
 # New messages: []
