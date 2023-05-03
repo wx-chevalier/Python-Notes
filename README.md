@@ -7,19 +7,19 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wx-chevalier/Python-Series">
+  <a href="https://github.com/wx-chevalier/Python-Notes">
     <img src="https://assets.ng-tech.icu/item/header.svg" alt="Logo" style="width: 100vw;height: 400px" />
   </a>
 
   <p align="center">
-    <a href="https://github.com/wx-chevalier/Python-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://github.com/wx-chevalier/Python-Notes"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
-    <a href="https://github.com/wx-chevalier/Python-Series">速览手册</a>
+    <a href="https://github.com/wx-chevalier/Python-Notes">速览手册</a>
     ·
-    <a href="https://github.com/wx-chevalier/Python-Series/issues">代码实践</a>
+    <a href="https://github.com/wx-chevalier/Python-Notes/issues">代码实践</a>
     ·
-    <a href="https://github.com/wx-chevalier/Python-Series/issues">参考资料</a>
+    <a href="https://github.com/wx-chevalier/Python-Notes/issues">参考资料</a>
 
   </p>
 </p>
@@ -36,7 +36,7 @@ Python 也有一些缺点。Python 经常被人们吐槽的一点就是：运行
 
 ## Nav | 关联导航
 
-- 本书的精排目录导航版请参考 [https://ng-tech.icu/books/Python-Series](https://ng-tech.icu/books/Python-Series)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Series)。
+- 本书的精排目录导航版请参考 [https://ng-tech.icu/books/Python-Notes](https://ng-tech.icu/books/Python-Notes)，更多 AI 相关内容参阅 [AI Series](https://github.com/wx-chevalier/AI-Notes)。
 
 # About | 关于
 
@@ -69,13 +69,13 @@ Contributions are what make the open source community such an amazing place to b
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Python-Series.svg?style=flat-square
-[contributors-url]: https://github.com/wx-chevalier/Python-Series/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Python-Series.svg?style=flat-square
-[forks-url]: https://github.com/wx-chevalier/Python-Series/network/members
-[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Python-Series.svg?style=flat-square
-[stars-url]: https://github.com/wx-chevalier/Python-Series/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Python-Series.svg?style=flat-square
-[issues-url]: https://github.com/wx-chevalier/Python-Series/issues
-[license-shield]: https://img.shields.io/github/license/wx-chevalier/Python-Series.svg?style=flat-square
-[license-url]: https://github.com/wx-chevalier/Python-Series/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Python-Notes.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/Python-Notes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Python-Notes.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/Python-Notes/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Python-Notes.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/Python-Notes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Python-Notes.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/Python-Notes/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/Python-Notes.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/Python-Notes/blob/master/LICENSE.txt
