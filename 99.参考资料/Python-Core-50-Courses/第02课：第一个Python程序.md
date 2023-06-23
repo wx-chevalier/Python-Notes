@@ -51,19 +51,19 @@ Visual Studio Code（通常简称为 VSCode）是一个由微软开发能够在 
 
 运行 PyCharm，可以看到如下图所示的欢迎界面，可以选择“New Project”来创建一个新的项目。
 
-<img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210720102203.png" width="80%">
+<img src="https://assets.ng-tech.icu/book/Python-100-Days/20210720102203.png" width="80%">
 
 创建项目的时候需要指定项目的路径并创建运行项目的”虚拟环境“，如下图所示。
 
-<img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210720102822.png" width="80%">
+<img src="https://assets.ng-tech.icu/book/Python-100-Days/20210720102822.png" width="80%">
 
 项目创建好以后会出现如下图所示的画面，我们可以通过在项目文件夹上点击鼠标右键，选择“New”菜单下的“Python File”来创建一个 Python 文件，创建好的 Python 文件会自动打开进入可编辑的状态。
 
-![image-20210720133621079](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210720133621.png)
+![image-20210720133621079](https://assets.ng-tech.icu/book/Python-100-Days/20210720133621.png)
 
 写好代码后，可以在编辑代码的窗口点击鼠标右键，选择“Run”菜单项来运行代码，下面的“Run”窗口会显示代码的执行结果，如下图所示。
 
-![image-20210720134039848](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210720134039.png)
+![image-20210720134039848](https://assets.ng-tech.icu/book/Python-100-Days/20210720134039.png)
 
 PyCharm 常用的快捷键如下表所示，我们也可以在“File”菜单的“Settings”中定制 PyCharm 的快捷键（macOS 系统是在“PyCharm”菜单的“Preferences”中对快捷键进行设置）。
 

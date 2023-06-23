@@ -81,33 +81,33 @@ vim redis.conf
 
 配置 Redis 服务的 IP 地址和端口：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-bind-and-port.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-bind-and-port.png)
 
 配置底层有多少个数据库：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-databases.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-databases.png)
 
 配置 Redis 的持久化机制 - RDB。
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-rdb-1.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-rdb-1.png)
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-rdb-3.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-rdb-3.png)
 
 配置 Redis 的持久化机制 - AOF：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-aof.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-aof.png)
 
 配置访问 Redis 服务器的口令：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-security.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-security.png)
 
 配置 Redis 的主从复制（通过主从复制可以实现读写分离）：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-replication.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-replication.png)
 
 配置慢查询：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-slow-logs.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-slow-logs.png)
 
 上面这些内容就是 Redis 的基本配置，如果你对上面的内容感到困惑也没有关系，先把 Redis 用起来再回头去推敲这些内容就行了。如果想找一些参考书，[《Redis 开发与运维》](https://item.jd.com/12121730.html)是一本不错的入门读物，而[《Redis 实战》](https://item.jd.com/11791607.html)是不错的进阶读物。
 
@@ -164,7 +164,7 @@ PONG
 
 Redis 有着非常丰富的数据类型，也有很多的命令来操作这些数据，具体的内容可以查看[Redis 命令参考](http://redisdoc.com/)，在这个网站上，除了 Redis 的命令参考，还有 Redis 的详细文档，其中包括了通知、事务、主从复制、持久化、哨兵、集群等内容。
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/redis-data-types.png)
+![](https://assets.ng-tech.icu/book/Python-100-Days/redis-data-types.png)
 
 > **说明**：上面的插图来自付磊和张益军编著的《Redis 开发与运维》一书。
 
