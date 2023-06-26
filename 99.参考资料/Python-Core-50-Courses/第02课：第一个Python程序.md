@@ -43,7 +43,7 @@ ipython
 
 #### 文本编辑器 - Visual Studio Code
 
-Visual Studio Code（通常简称为 VSCode）是一个由微软开发能够在 Windows、 Linux 和 macOS 等操作系统上运行的代码编辑神器。它支持语法高亮、自动补全、多点编辑、运行调试等一系列便捷功能，而且能够支持多种编程语言。如果大家要选择一款高级文本编辑工具，强烈建议使用 VSCode。关于 VSCode 的[下载](https://code.visualstudio.com/)、安装和使用，推荐大家阅读一篇名为[《VScode 安装使用》](https://zhuanlan.zhihu.com/p/106357123)的文章。
+Visual Studio Code（通常简称为 VSCode）是一个由微软开发能够在 Windows、Linux 和 macOS 等操作系统上运行的代码编辑神器。它支持语法高亮、自动补全、多点编辑、运行调试等一系列便捷功能，而且能够支持多种编程语言。如果大家要选择一款高级文本编辑工具，强烈建议使用 VSCode。关于 VSCode 的[下载](https://code.visualstudio.com/)、安装和使用，推荐大家阅读一篇名为[《VScode 安装使用》](https://zhuanlan.zhihu.com/p/106357123)的文章。
 
 #### 集成开发环境 - PyCharm
 
