@@ -1,4 +1,4 @@
-## 关系型数据库和MySQL概述
+## 关系型数据库和 MySQL 概述
 
 ### 关系型数据库概述
 
@@ -6,7 +6,7 @@
 
 2. 数据库发展史 - 网状数据库、层次数据库、关系数据库、NoSQL 数据库、NewSQL 数据库。
 
-   > 1970年，IBM的研究员E.F.Codd在*Communication of the ACM*上发表了名为*A Relational Model of Data for Large Shared Data Banks*的论文，提出了**关系模型**的概念，奠定了关系模型的理论基础。后来Codd又陆续发表多篇文章，论述了范式理论和衡量关系系统的12条标准，用数学理论奠定了关系数据库的基础。
+   > 1970 年，IBM 的研究员 E.F.Codd 在*Communication of the ACM*上发表了名为*A Relational Model of Data for Large Shared Data Banks*的论文，提出了**关系模型**的概念，奠定了关系模型的理论基础。后来 Codd 又陆续发表多篇文章，论述了范式理论和衡量关系系统的 12 条标准，用数学理论奠定了关系数据库的基础。
 
 3. 关系数据库特点。
 
@@ -16,9 +16,9 @@
 
    - 编程语言：**结构化查询语言**（SQL）。
 
-4. ER模型（实体关系模型）和概念模型图。
+4. ER 模型（实体关系模型）和概念模型图。
 
-   **ER模型**，全称为**实体关系模型**（Entity-Relationship Model），由美籍华裔计算机科学家陈品山先生提出，是概念数据模型的高层描述方式，如下图所示。
+   **ER 模型**，全称为**实体关系模型**（Entity-Relationship Model），由美籍华裔计算机科学家陈品山先生提出，是概念数据模型的高层描述方式，如下图所示。
 
    <img src="https://gitee.com/jackfrued/mypic/raw/master/20210826003119.png" width="75%">
 
@@ -40,7 +40,7 @@
 
 ### MySQL 简介
 
-MySQL 最早是由瑞典的 MySQL AB 公司开发的一个开放源码的关系数据库管理系统，该公司于2008年被昇阳微系统公司（Sun Microsystems）收购。在2009年，甲骨文公司（Oracle）收购昇阳微系统公司，因此 MySQL 目前也是 Oracle 旗下产品。
+MySQL 最早是由瑞典的 MySQL AB 公司开发的一个开放源码的关系数据库管理系统，该公司于 2008 年被昇阳微系统公司（Sun Microsystems）收购。在 2009 年，甲骨文公司（Oracle）收购昇阳微系统公司，因此 MySQL 目前也是 Oracle 旗下产品。
 
 MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流行的开源数据库，因此被广泛地应用于中小型网站开发。随着 MySQL 的不断成熟，它也逐渐被应用于更多大规模网站和应用，比如维基百科、谷歌（Google）、脸书（Facebook）、淘宝网等网站都使用了 MySQL 来提供数据持久化服务。
 
@@ -50,87 +50,87 @@ MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流�
 
 #### Windows 环境
 
-1. 通过[官方网站](https://www.mysql.com/)提供的[下载链接](https://dev.mysql.com/downloads/windows/installer/8.0.html)下载“MySQL社区版服务器”安装程序，如下图所示，建议大家下载离线安装版的MySQL Installer。
+1. 通过[官方网站](https://www.mysql.com/)提供的[下载链接](https://dev.mysql.com/downloads/windows/installer/8.0.html)下载“MySQL 社区版服务器”安装程序，如下图所示，建议大家下载离线安装版的 MySQL Installer。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105230905.png" style="zoom:50%">
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20211105230905.png" style="zoom:50%">
 
 2. 运行 Installer，按照下面的步骤进行安装。
 
-    - 选择自定义安装。
+   - 选择自定义安装。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231152.jpg" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231152.jpg" style="zoom:35%">
 
-    - 选择需要安装的组件。
+   - 选择需要安装的组件。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231255.jpg" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231255.jpg" style="zoom:35%">
 
-    - 如果缺少依赖项，需要先安装依赖项。
+   - 如果缺少依赖项，需要先安装依赖项。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231620.png" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231620.png" style="zoom:35%">
 
-    - 准备开始安装。
+   - 准备开始安装。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231719.jpg" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231719.jpg" style="zoom:35%">
 
-    - 安装完成。
+   - 安装完成。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232024.jpg" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232024.jpg" style="zoom:35%">
 
-    - 准备执行配置向导。
+   - 准备执行配置向导。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231815.jpg" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105231815.jpg" style="zoom:35%">
 
 3. 执行安装后的配置向导。
 
-    - 配置服务器类型和网络。
+   - 配置服务器类型和网络。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232109.jpg" style="zoom:35%">
+   <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232109.jpg" style="zoom:35%">
 
-    - 配置认证方法（保护密码的方式）。
+   - 配置认证方法（保护密码的方式）。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232408.jpg" style="zoom:35%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232408.jpg" style="zoom:35%">
 
-    - 配置用户和角色。
+   - 配置用户和角色。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232521.jpg" style="zoom:35%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232521.jpg" style="zoom:35%">
 
-    - 配置Windows服务名以及是否开机自启。
+   - 配置 Windows 服务名以及是否开机自启。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232608.jpg" style="zoom:35%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232608.jpg" style="zoom:35%">
 
-    - 配置日志。
+   - 配置日志。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232641.jpg" style="zoom:35%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232641.jpg" style="zoom:35%">
 
-    - 配置高级选项。
+   - 配置高级选项。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232724.jpg" alt="ACAC15B8633133B65476286A49BFBD7E" style="zoom:35%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232724.jpg" alt="ACAC15B8633133B65476286A49BFBD7E" style="zoom:35%">
 
-    - 应用配置。
+   - 应用配置。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232800.jpg" style="zoom:35%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232800.jpg" style="zoom:35%">
 
 4. 可以在 Windows 系统的“服务”窗口中启动或停止 MySQL。
 
-    <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232926.jpg" style="zoom:50%">
+<img src="https://gitee.com/jackfrued/mypic/raw/master/20211105232926.jpg" style="zoom:50%">
 
 5. 配置 PATH 环境变量，以便在命令行提示符窗口使用 MySQL 客户端工具。
 
-    - 打开 Windows 的“系统”窗口并点击“高级系统设置”。
+   - 打开 Windows 的“系统”窗口并点击“高级系统设置”。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233054.jpg" style="zoom:50%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233054.jpg" style="zoom:50%">
 
-    - 在“系统属性”的“高级”窗口，点击“环境变量”按钮。
+   - 在“系统属性”的“高级”窗口，点击“环境变量”按钮。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233312.jpg" style="zoom:50%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233312.jpg" style="zoom:50%">
 
-    - 修改PATH环境变量，将MySQL安装路径下的`bin`文件夹的路径配置到PATH环境变量中。
+   - 修改 PATH 环境变量，将 MySQL 安装路径下的`bin`文件夹的路径配置到 PATH 环境变量中。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233359.jpg" style="zoom:50%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233359.jpg" style="zoom:50%">
 
-    - 配置完成后，可以尝试在“命令提示符”下使用 MySQL 的命令行工具。
+   - 配置完成后，可以尝试在“命令提示符”下使用 MySQL 的命令行工具。
 
-        <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233643.jpg" style="zoom:50%">
+       <img src="https://gitee.com/jackfrued/mypic/raw/master/20211105233643.jpg" style="zoom:50%">
 
 #### Linux 环境
 
@@ -138,7 +138,7 @@ MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流�
 
 1. 安装 MySQL。
 
-   可以在 [MySQL 官方网站](<https://www.mysql.com/>)下载安装文件。首先在下载页面中选择平台和版本，然后找到对应的下载链接，直接下载包含所有安装文件的归档文件，解归档之后通过包管理工具进行安装。
+   可以在 [MySQL 官方网站](https://www.mysql.com/)下载安装文件。首先在下载页面中选择平台和版本，然后找到对应的下载链接，直接下载包含所有安装文件的归档文件，解归档之后通过包管理工具进行安装。
 
    ```Shell
    wget https://dev.mysql.com/get/Downloads/MySQL-5.7/mysql-5.7.26-1.el7.x86_64.rpm-bundle.tar
@@ -186,7 +186,7 @@ MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流�
    ```INI
    # For advice on how to change settings please see
    # http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html
-   
+
    [mysqld]
    #
    # Remove leading # and set to the amount of RAM for the most important data
@@ -205,10 +205,10 @@ MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流�
    # read_rnd_buffer_size = 2M
    datadir=/var/lib/mysql
    socket=/var/lib/mysql/mysql.sock
-   
+
    # Disabling symbolic-links is recommended to prevent assorted security risks
    symbolic-links=0
-   
+
    log-error=/var/log/mysqld.log
    pid-file=/var/run/mysqld/mysqld.pid
    ```
@@ -249,7 +249,7 @@ MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流�
    mysql -u root -p
    ```
 
-   > 说明：启动客户端时，`-u`参数用来指定用户名，MySQL 默认的超级管理账号为`root`；`-p`表示要输入密码（用户口令）；如果连接的是其他主机而非本机，可以用`-h`来指定连接主机的主机名或IP地址。
+   > 说明：启动客户端时，`-u`参数用来指定用户名，MySQL 默认的超级管理账号为`root`；`-p`表示要输入密码（用户口令）；如果连接的是其他主机而非本机，可以用`-h`来指定连接主机的主机名或 IP 地址。
 
    如果是首次安装 MySQL，可以使用下面的命令来找到默认的初始密码。
 
@@ -278,9 +278,8 @@ MySQL 在过去由于性能高、成本低、可靠性好，已经成为最流�
    - Navicat for MySQL（界面简单友好）
 
        <img src="https://gitee.com/jackfrued/mypic/raw/master/20210521152457.png" style="zoom:50%;">
-   
 
-#### macOS环境
+#### macOS 环境
 
 macOS 系统安装 MySQL 是比较简单的，只需要从刚才说到的官方网站下载 DMG 安装文件并运行就可以了，下载的时候需要根据自己使用的是 Intel 的芯片还是苹果的 M1 芯片选择下载链接，如下图所示。
 
@@ -336,27 +335,27 @@ show tables;
 
 1. 查看`show`命令的帮助。
 
-    ```MySQL
-    ? show
-    ```
+   ```MySQL
+   ? show
+   ```
 
 2. 查看有哪些帮助内容。
 
-    ```MySQL
-    ? contents
-    ```
+   ```MySQL
+   ? contents
+   ```
 
 3. 获取函数的帮助。
 
-    ```MySQL
-    ? functions
-    ```
+   ```MySQL
+   ? functions
+   ```
 
 4. 获取数据类型的帮助。
 
-    ```MySQL
-    ? data types
-    ```
+   ```MySQL
+   ? data types
+   ```
 
 #### 其他命令
 
@@ -383,6 +382,3 @@ show tables;
 11. 显示警告信息 - `warnings`。
 
 12. 退出命令行 - `quit`或`exit`。
-
-    
-
