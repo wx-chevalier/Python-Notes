@@ -20,7 +20,7 @@
        ...
        log('Reason:', e)       # Important!
 
-这个将会捕获除了 ``SystemExit`` 、 ``KeyboardInterrupt`` 和 ``GeneratorExit`` 之外的所有异常。
+这个将会捕获除了 ``SystemExit``、``KeyboardInterrupt`` 和 ``GeneratorExit`` 之外的所有异常。
 如果你还想捕获这三个异常，将 ``Exception`` 改成 ``BaseException`` 即可。
 
 ----------
