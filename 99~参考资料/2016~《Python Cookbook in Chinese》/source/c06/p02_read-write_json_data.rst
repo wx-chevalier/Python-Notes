@@ -48,7 +48,7 @@
 ----------
 讨论
 ----------
-JSON编码支持的基本数据类型为 ``None`` ， ``bool`` ， ``int`` ， ``float`` 和 ``str`` ，
+JSON编码支持的基本数据类型为 ``None`` ，``bool`` ，``int`` ，``float`` 和 ``str`` ，
 以及包含这些类型数据的lists，tuples和dictionaries。
 对于dictionaries，keys需要是字符串类型(字典中任何非字符串类型的key在编码时会先转换为字符串)。
 为了遵循JSON规范，你应该只编码Python的lists和dictionaries。

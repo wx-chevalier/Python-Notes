@@ -113,12 +113,12 @@ Copyright 2013 David Beazley and Brian Jones, 978-1-449-34037-7.
 
 |
 
-我们为本书建立了一个网页， 其中包含勘误表，示例和一些其他信息。
+我们为本书建立了一个网页，其中包含勘误表，示例和一些其他信息。
 可以通过链接 http://oreil.ly/python_cookbook_3e 访问。
 
 关于本书的建议和技术性问题，请发送邮件至： bookquestions@oreilly.com
 
-关于我们的书籍，讨论会，新闻的更多信息， 请访问我们的网站： http://www.oreilly.com
+关于我们的书籍，讨论会，新闻的更多信息，请访问我们的网站： http://www.oreilly.com
 
 在 Facebook 上找到我们：http://facebook.com/oreilly
 

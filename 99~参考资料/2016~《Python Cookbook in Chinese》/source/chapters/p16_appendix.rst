@@ -30,10 +30,10 @@ Python学习书籍
 -------------------
 下面这些书籍提供了对Python编程的入门介绍，且重点放在了Python 3上。
 
-* *Learning Python*，第四版 ，作者 Mark Lutz， O’Reilly & Associates 出版 (2009)。
-* *The Quick Python Book*，作者 Vernon Ceder， Manning 出版(2010)。
+* *Learning Python*，第四版 ，作者 Mark Lutz，O’Reilly & Associates 出版 (2009)。
+* *The Quick Python Book*，作者 Vernon Ceder，Manning 出版(2010)。
 * *Python Programming for the Absolute Beginner*，第三版，作者 Michael Dawson，Course Technology PTR 出版(2010).
-* *Beginning Python: From Novice to Professional*，第二版， 作者 Magnus Lie Het‐ land， Apress 出版(2008).
+* *Beginning Python: From Novice to Professional*，第二版，作者 Magnus Lie Het‐ land，Apress 出版(2008).
 * *Programming in Python 3*，第二版，作者 Mark Summerfield，Addison-Wesley 出版 (2010).
 
 -------------------
@@ -44,6 +44,6 @@ Python学习书籍
 * *Programming Python*，第四版, by Mark Lutz, O’Reilly & Associates 出版(2010).
 * *Python Essential Reference*，第四版，作者 David Beazley, Addison-Wesley 出版(2009).
 * *Core Python Applications Programming*，第三版，作者 Wesley Chun, Prentice Hall 出版(2012).
-* *The Python Standard Library by Example* ， 作者 Doug Hellmann，Addison-Wesley 出版(2011).
+* *The Python Standard Library by Example* ，作者 Doug Hellmann，Addison-Wesley 出版(2011).
 * *Python 3 Object Oriented Programming*，作者 Dusty Phillips, Packt Publishing 出版(2010).
-* *Porting to Python 3*， 作者 Lennart Regebro，CreateSpace 出版(2011), http://python3porting.com.
+* *Porting to Python 3*，作者 Lennart Regebro，CreateSpace 出版(2011), http://python3porting.com.

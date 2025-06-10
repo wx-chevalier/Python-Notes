@@ -39,7 +39,7 @@ def last_friday():
     print(d + relativedelta(weekday=FR))
     # 上一个周五
     print(d + relativedelta(weekday=FR(-1)))
-    # 下一个周六， 为什么如果今天是周六，下一个/上一个都返回今天的日期？？
+    # 下一个周六，为什么如果今天是周六，下一个/上一个都返回今天的日期？？
     print(d + relativedelta(weekday=SA))
     # 上一个周六
     print(d + relativedelta(weekday=SA(-1)))

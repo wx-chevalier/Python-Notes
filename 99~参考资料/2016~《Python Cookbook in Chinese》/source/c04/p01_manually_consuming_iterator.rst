@@ -24,7 +24,7 @@
             except StopIteration:
                 pass
 
-通常来讲， ``StopIteration`` 用来指示迭代的结尾。
+通常来讲，``StopIteration`` 用来指示迭代的结尾。
 然而，如果你手动使用上面演示的 ``next()`` 函数的话，你还可以通过返回一个指定值来标记结尾，比如 ``None`` 。
 下面是示例：
 

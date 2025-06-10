@@ -106,9 +106,9 @@
     random.seed(b'bytedata') # Seed based on byte data
 
 除了上述介绍的功能，random模块还包含基于均匀分布、高斯分布和其他分布的随机数生成函数。
-比如， ``random.uniform()`` 计算均匀分布随机数， ``random.gauss()`` 计算正态分布随机数。
+比如，``random.uniform()`` 计算均匀分布随机数，``random.gauss()`` 计算正态分布随机数。
 对于其他的分布情况请参考在线文档。
 
 在 ``random`` 模块中的函数不应该用在和密码学相关的程序中。
 如果你确实需要类似的功能，可以使用ssl模块中相应的函数。
-比如， ``ssl.RAND_bytes()`` 可以用来生成一个安全的随机字节序列。
+比如，``ssl.RAND_bytes()`` 可以用来生成一个安全的随机字节序列。

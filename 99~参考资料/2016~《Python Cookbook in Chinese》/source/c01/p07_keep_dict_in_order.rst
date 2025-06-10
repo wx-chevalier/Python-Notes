@@ -26,7 +26,7 @@
     for key in d:
         print(key, d[key])
 
-当你想要构建一个将来需要序列化或编码成其他格式的映射的时候， ``OrderedDict`` 是非常有用的。
+当你想要构建一个将来需要序列化或编码成其他格式的映射的时候，``OrderedDict`` 是非常有用的。
 比如，你想精确控制以 JSON 编码后字段的顺序，你可以先使用 ``OrderedDict`` 来构建这样的数据：
 
 .. code-block:: python
