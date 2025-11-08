@@ -175,7 +175,7 @@ wb.save('demo.xlsx')
 
 运行上面的代码，打开生成的 Excel 文件，效果如下图所示。
 
-<img src="https://assets.ng-tech.icu/book/Python-100-Days/20210819235009.png" alt="image-20210819235009026" width="75%">
+<img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210819235009.png" alt="image-20210819235009026" width="75%">
 
 ### 简单的总结
 

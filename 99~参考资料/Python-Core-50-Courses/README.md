@@ -32,4 +32,4 @@
 2. 骆昊的 Python 学习群-2，群号：837590310，2000 人大群。
 3. 骆昊的 Python 学习群-3，群号：784430256，1000 人大群。
 
-<img src="https://assets.ng-tech.icu/book/Python-100-Days/20220616120218.JPG" style="zoom: 75%;">
+<img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20220616120218.JPG" style="zoom: 75%;">

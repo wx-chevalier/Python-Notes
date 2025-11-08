@@ -434,7 +434,7 @@ Python 在以下领域都有用武之地。
      > - **客户合作** 高于 合同谈判
      > - **响应变化** 高于 遵循计划
 
-     ![](https://assets.ng-tech.icu/book/Python-100-Days/agile-scrum-sprint-cycle.png)
+     ![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/agile-scrum-sprint-cycle.png)
 
      > 角色：产品所有者（决定做什么，能对需求拍板的人）、团队负责人（解决各种问题，专注如何更好的工作，屏蔽外部对开发团队的影响）、开发团队（项目执行人员，具体指开发人员和测试人员）。
 
@@ -450,11 +450,11 @@ Python 在以下领域都有用武之地。
 
      > 说明：谢谢**付祥英**女士帮助我绘制了下面这张精美的公司组织架构图。
 
-     ![company_architecture](https://assets.ng-tech.icu/book/Python-100-Days/company_architecture.png)
+     ![company_architecture](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/company_architecture.png)
 
    - 编程规范和代码审查（`flake8`、`pylint`）
 
-     ![](https://assets.ng-tech.icu/book/Python-100-Days/pylint.png)
+     ![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/pylint.png)
 
    - Python 中的一些“惯例”（请参考[《Python 惯例-如何编写 Pythonic 的代码》](Python惯例.md)）
 
@@ -489,7 +489,7 @@ Python 在以下领域都有用武之地。
    - 模块划分：画思维导图（XMind），每个模块是一个枝节点，每个具体的功能是一个叶节点（用动词表述），需要确保每个叶节点无法再生出新节点，确定每个叶子节点的重要性、优先级和工作量。
    - 任务分配：由项目负责人根据上面的指标为每个团队成员分配任务。
 
-   ![](https://assets.ng-tech.icu/book/Python-100-Days/requirements_by_xmind.png)
+   ![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/requirements_by_xmind.png)
 
 3. 制定项目进度表（每日更新）
 
@@ -504,7 +504,7 @@ Python 在以下领域都有用武之地。
 
 - UML（统一建模语言）的类图
 
-  ![uml](https://assets.ng-tech.icu/book/Python-100-Days/uml-class-diagram.png)
+  ![uml](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/uml-class-diagram.png)
 
 - 通过模型创建表（正向工程），例如在 Django 项目中可以通过下面的命令创建二维表。
 
@@ -515,7 +515,7 @@ Python 在以下领域都有用武之地。
 
 - 使用 PowerDesigner 绘制物理模型图。
 
-  ![](https://assets.ng-tech.icu/book/Python-100-Days/power-designer-pdm.png)
+  ![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/power-designer-pdm.png)
 
 - 通过数据表创建模型（反向工程），例如在 Django 项目中可以通过下面的命令生成模型。
 

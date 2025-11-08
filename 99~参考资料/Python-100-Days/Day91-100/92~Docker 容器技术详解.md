@@ -12,7 +12,7 @@ Docker 是基于 Go 语言开发的开源应用容器引擎，遵从 Apache Lice
 
 Docker 属于对 Linux 容器技术（LXC）的一种封装（利用了 Linux 的 namespace 和 cgroup 技术），它提供了简单易用的容器使用接口，是目前最流行的 Linux 容器解决方案。Docker 将应用程序与该程序的依赖打包在一个文件里面，运行这个文件，就会生成一个虚拟容器。程序在这个虚拟容器里运行，就好像在真实的物理机上运行一样。下图是虚拟机和容器的对比，左边是传统的虚拟机，右边是 Docker。
 
-![](https://assets.ng-tech.icu/book/Python-100-Days/docker_vs_vm.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/docker_vs_vm.png)
 
 目前，Docker 主要用于几下几个方面：
 
@@ -600,7 +600,7 @@ Login Succeeded
 docker push jackfrued/webserver
 ```
 
-![](https://assets.ng-tech.icu/book/Python-100-Days/dockerhub-repo.png)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/dockerhub-repo.png)
 
 #### Dockerfile 指令
 
