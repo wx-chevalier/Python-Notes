@@ -32,8 +32,7 @@ $ python
 '/Users/ethan/coding/python/web'
 >>> os.path.abspath('.')                # 当前目录的绝对路径
 '/Users/ethan/coding/python'
-```
-
+```python
 - os.path.dirname：获取文件或文件夹的路径
 
 ```python
@@ -43,8 +42,7 @@ $ python
 '/Users/ethan/coding/python'
 >>> os.path.dirname('/Users/ethan/coding/python')
 '/Users/ethan/coding'
-```
-
+```python
 - os.path.basename：获取文件名或文件夹名
 
 ```python
@@ -54,8 +52,7 @@ $ python
 ''
 >>> os.path.basename('/Users/ethan/coding/python')
 'python'
-```
-
+```python
 - os.path.splitext：分离文件名与扩展名
 
 ```python
@@ -65,8 +62,7 @@ $ python
 ('/Users/ethan/coding/python', '')
 >>> os.path.splitext('/Users/ethan/coding/python/')
 ('/Users/ethan/coding/python/', '')
-```
-
+```python
 - os.path.split：分离目录与文件名
 
 ```python
@@ -76,8 +72,7 @@ $ python
 ('/Users/ethan/coding/python', '')
 >>> os.path.split('/Users/ethan/coding/python')
 ('/Users/ethan/coding', 'python')
-```
-
+```python
 - os.path.isfile/os.path.isdir
 
 ```python
@@ -89,8 +84,7 @@ True
 True
 >>> os.path.isdir('/Users/ethan/coding/python/hello.py')
 False
-```
-
+```python
 - os.walk
 
 os.walk 是遍历目录常用的模块，它返回一个包含 3 个元素的元组：(dirpath, dirnames, filenames)。dirpath 是以 string 字符串形式返回该目录下所有的绝对路径；dirnames 是以列表 list 形式返回每一个绝对路径下的文件夹名字；filenames 是以列表 list 形式返回该路径下所有文件名字。
@@ -110,4 +104,4 @@ os.walk 是遍历目录常用的模块，它返回一个包含 3 个元素的元
 /Users/ethan/coding/python/web2
 []
 []
-```
+```python

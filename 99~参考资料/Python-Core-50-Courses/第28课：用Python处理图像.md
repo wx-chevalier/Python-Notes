@@ -19,8 +19,7 @@ Pillow 是由从著名的 Python 图像处理库 PIL 发展出来的一个分支
 
 ```Shell
 pip install pillow
-```
-
+```python
 Pillow 中最为重要的是`Image`类，可以通过`Image`模块的`open`函数来读取图像并获得`Image`类型的对象。
 
 1. 读取和显示图像
@@ -130,14 +129,12 @@ import random
 
 from PIL import Image, ImageDraw, ImageFont
 
-
 def random_color():
     """生成随机颜色"""
     red = random.randint(0, 255)
     green = random.randint(0, 255)
     blue = random.randint(0, 255)
     return red, green, blue
-
 
 width, height = 800, 600
 # 创建一个800*600的图像，背景色为白色
@@ -162,8 +159,7 @@ for i in range(4):
 image.show()
 # 保存图像
 image.save('result.png')
-```
-
+```python
 > **注意**：上面代码中使用的字体文件需要根据自己准备，可以选择自己喜欢的字体文件并放置在代码目录下。
 
 ### 简单的总结

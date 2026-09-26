@@ -8,8 +8,7 @@ Excel 是 Microsoft（微软）为使用 Windows 和 macOS 操作系统开发的
 
 ```Bash
 pip install openpyxl
-```
-
+```python
 `openpyxl`的优点在于，当我们打开一个 Excel 文件后，既可以对它进行读操作，又可以对它进行写操作，而且在操作的便捷性上是优于`xlwt`和`xlrd`的。此外，如果要进行样式编辑和公式计算，使用`openpyxl`也远比上一个章节我们讲解的方式更为简单，而且`openpyxl`还支持数据透视和插入图表等操作，功能非常强大。有一点需要再次强调，`openpyxl`并不支持操作 Office 2007 以前版本的 Excel 文件。
 
 ### 读取 Excel 文件
@@ -53,8 +52,7 @@ for row_ch in range(2, sheet.max_row + 1):
         else:
             print(value, end='\t')
     print()
-```
-
+```python
 > **提示**：上面代码中使用的 Excel 文件“阿里巴巴 2020 年股票数据.xlsx”可以通过后面的百度云盘地址进行获取。链接:https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g 提取码:e7b4。
 
 需要提醒大家一点，`openpyxl`获取指定的单元格有两种方式，一种是通过`cell`方法，需要注意，该方法的行索引和列索引都是从`1`开始的，这是为了照顾用惯了 Excel 的人的习惯；另一种是通过索引运算，通过指定单元格的坐标，例如`C3`、`G255`，也可以取得对应的单元格，再通过单元格对象的`value`属性，就可以获取到单元格的值。通过上面的代码，相信大家还注意到了，可以通过类似`sheet['A2:C5']`或`sheet['A2':'C5']`这样的切片操作获取多个单元格，该操作将返回嵌套的元组，相当于获取到了多行多列。
@@ -87,8 +85,7 @@ for row_index, name in enumerate(names):
 
 # 第四步：保存工作簿
 wb.save('考试成绩表.xlsx')
-```
-
+```python
 #### 调整样式和公式计算
 
 在使用`openpyxl`操作 Excel 时，如果要调整单元格的样式，可以直接通过单元格对象（`Cell`对象）的属性进行操作。单元格对象的属性包括字体（`font`）、对齐（`alignment`）、边框（`border`）等，具体的可以参考`openpyxl`的[官方文档](https://openpyxl.readthedocs.io/en/stable/index.html)。在使用`openpyxl`时，如果需要做公式计算，可以完全按照 Excel 中的操作方式来进行，具体的代码如下所示。
@@ -123,8 +120,7 @@ for i in range(2, 7):
     sheet.cell(i, 5).alignment = alignment
 
 wb.save('考试成绩表.xlsx')
-```
-
+```python
 ### 生成统计图表
 
 通过`openpyxl`库，可以直接向 Excel 中插入统计图表，具体的做法跟在 Excel 中插入图表大体一致。我们可以创建指定类型的图表对象，然后通过该对象的属性对图表进行设置。当然，最为重要的是为图表绑定数据，即横轴代表什么，纵轴代表什么，具体的数值是多少。最后，可以将图表对象添加到表单中，具体的代码如下所示。
@@ -171,8 +167,7 @@ chart.shape = 4
 sheet.add_chart(chart, 'A10')
 
 wb.save('demo.xlsx')
-```
-
+```python
 运行上面的代码，打开生成的 Excel 文件，效果如下图所示。
 
 <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210819235009.png" alt="image-20210819235009026" width="75%">

@@ -8,8 +8,8 @@ Online reading address: http://python3-cookbook.readthedocs.org/zh_CN/latest/
 
 The latest version (3.0.0) download
 
-* Chinese simplified version PDF download address: https://pan.baidu.com/s/1pL1cI9d
-* Chinese Traditional Chinese PDF download address: https://pan.baidu.com/s/1qX97VJI
+- Chinese simplified version PDF download address: https://pan.baidu.com/s/1pL1cI9d
+- Chinese Traditional Chinese PDF download address: https://pan.baidu.com/s/1qX97VJI
 
 ## Translator's words
 
@@ -34,18 +34,16 @@ At present, the translation of the entire book has been officially completed. It
 
 **Welcome to my personal public number "Flying Saffron Bear", I will share some of my own Python study notes and tips on a regular basis. **
 
-
 [[Public Number] (https://github.com/yidao620c/python3-cookbook/raw/master/exts/wuxiong.jpg)
-
 
 ## project instruction
 
-* All documents are edited using reStructuredText, refer to [reStructuredText] (http://docutils.sourceforge.net/docs/user/rst/quickref.html)
-* Current document generation is hosted on [readthedocs] (https://readthedocs.org/)
-* Generated document preview address: [python3-cookbook](http://python3-cookbook.readthedocs.org/zh_CN/latest/)
-* Use the python official documentation theme [sphinx-rtd-theme] (https://github.com/snide/sphinx_rtd_theme), which is also the default theme default.
-* All code in the book runs under Python 3.6, all source code is placed under the cookbook package
-```
+- All documents are edited using reStructuredText, refer to [reStructuredText] (http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+- Current document generation is hosted on [readthedocs] (https://readthedocs.org/)
+- Generated document preview address: [python3-cookbook](http://python3-cookbook.readthedocs.org/zh_CN/latest/)
+- Use the python official documentation theme [sphinx-rtd-theme] (https://github.com/snide/sphinx_rtd_theme), which is also the default theme default.
+- All code in the book runs under Python 3.6, all source code is placed under the cookbook package
+```python
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
@@ -55,8 +53,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
-```
-
+```python
 ## Other contributors
 
 names not listed in order：
@@ -71,7 +68,6 @@ names not listed in order：
 1. FPlust (https://github.com/fplust)
 1. lambdaplus (https://github.com/lambdaplus)
 1. Tony Yang (liuliu036@gmail.com)
-
 
 [More contributors] (https://github.com/yidao620c/python3-cookbook/graphs/contributors)
 
@@ -97,18 +93,18 @@ Thanks again to each contributor.
 
 You are welcome to contribute to the project as follow
 
-* fork project and commit pull requests
-* add/edit wiki
-* report/fix issue
-* code review
-* commit new feature
-* add testcase
+- fork project and commit pull requests
+- add/edit wiki
+- report/fix issue
+- code review
+- commit new feature
+- add testcase
 
 Meanwhile you'd better follow the rules below
 
-* It's *NOT* recommended to submit a pull request directly to `master` branch. `develop` branch is more appropriate
-* Follow common Python coding conventions
-* Add the following [license] in each source file
+- It's *NOT* recommended to submit a pull request directly to `master` branch. `develop` branch is more appropriate
+- Follow common Python coding conventions
+- Add the following [license] in each source file
 
 ## License
 
@@ -116,16 +112,15 @@ Meanwhile you'd better follow the rules below
 
 Copyright (c) 2014-2018 [Xiong Neng](<https://www.xncoding.com/>) and other contributors
 
-Licensed under the Apache License, Version 2.0 (the "License"); 
+Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
        http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, 
-software distributed under the License is distributed on an "AS IS" BASIS, 
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
-
 
 [licensesvg]: https://img.shields.io/hexpm/l/plug.svg
 [license]: http://www.apache.org/licenses/LICENSE-2.0

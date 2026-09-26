@@ -75,8 +75,7 @@ constraint `fk_record_stu_id` foreign key (`stu_id`) references `tb_student` (`s
 constraint `fk_record_cou_id` foreign key (`cou_id`) references `tb_course` (`cou_id`),
 constraint `uk_record_stu_cou` unique (`stu_id`, `cou_id`)
 ) engine=innodb comment '选课记录表';
-```
-
+```python
 上面的 DDL 有几个地方需要强调一下：
 
 - 首先，上面 SQL 中的数据库名、表名、字段名都被反引号（`）包裹起来，反引号并不是必须的，但是却可以解决表名、字段名等跟 SQL 关键字（SQL 中有特殊含义的单词）冲突的问题。
@@ -348,14 +347,12 @@ constraint `uk_record_stu_cou` unique (`stu_id`, `cou_id`)
 
 ```SQL
 drop table `tb_student`;
-```
-
+```python
 或
 
 ```SQL
 drop table if exists `tb_student`;
-```
-
+```python
 需要注意的是，如果学生表已经录入了数据而且该数据被其他表引用了，那么就不能删除学生表，否则上面的操作会报错。在下一课中，我们会讲解如何向表中插入数据，到时候大家可以试一试，能否顺利删除学生表。
 
 如果要修改学生表，可以使用`alter table`，具体可以分为以下几种情况：
@@ -364,52 +361,44 @@ drop table if exists `tb_student`;
 
 ```SQL
 alter table `tb_student` add column `stu_tel` varchar(20) not null comment '联系电话';
-```
-
+```python
 > **注意**：如果新增列的时候指定了非空约束（`not null`），那么学生表不能够有数据，否则原来的数据增加了 stu_tel 列之后是没有数据的，这就违反了非空约束的要求；当然，我们在添加列的时候也可以使用默认值约束来解决这个问题。
 
 修改表，删除指定的列，例如将上面添加的联系电话列删除掉。
 
 ```SQL
 alter table `tb_student` drop column `stu_tel`;
-```
-
+```python
 修改表，修改列的数据类型，例如将学生表的 stu_sex 修改为字符。
 
 ```SQL
 alter table `tb_student` modify column `stu_sex` char(1) not null default 'M' comment '性别';
-```
-
+```python
 修改表，修改列的命名，例如将学生表的 stu_sex 修改为 stu_gender。
 
 ```SQL
 alter table `tb_student` change column `stu_sex` `stu_gender` boolean default 1 comment '性别';
-```
-
+```python
 修改表，删除约束条件，例如删除学生表的 col_id 列的外键约束。
 
 ```SQL
 alter table `tb_student` drop foreign key `fk_student_col_id`;
-```
-
+```python
 修改表，添加约束条件，例如给学生表的 col_id 列加上外键约束。
 
 ```SQL
 alter table `tb_student` add foreign key (`col_id`) references `tb_college` (`col_id`);
-```
-
+```python
 或
 
 ```SQL
 alter table `tb_student` add constraint `fk_student_col_id` foreign key (`col_id`) references `tb_college` (`col_id`);
-```
-
+```python
 > **说明**：在添加外键约束时，还可以通过`on update`和`on delete`来指定在被引用的表发生删除和更新操作时，应该进行何种处理，二者的默认值都是`restrict`，表示如果存在外键约束，则不允许更新和删除被引用的数据。除了`restrict`之外，这里可能的取值还有`cascade`（级联操作）和`set null`（设置为空），有兴趣的读者可以自行研究。
 
 修改表的名字，例如将学生表的名字修改为 tb_stu_info。
 
 ```SQL
 alter table `tb_student` rename to `tb_stu_info`;
-```
-
+```python
 > **提示**：一般情况下，请不要轻易修改数据库或表的名字。

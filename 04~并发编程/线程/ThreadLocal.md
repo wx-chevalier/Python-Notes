@@ -27,8 +27,7 @@ if __name__ == '__main__':
         threads[i].join()
 
     print 'thread %s ended.' % current_thread().name
-```
-
+```python
 在上面的代码中，我们创建了 5 个线程，每个线程都对自己的局部变量 local_num 进行 10000 次的加 1 操作。由于对线程局部变量的修改不会影响到其他线程，因此，我们可以看到，每个线程结束时打印的 local_num 的值都为 10000，执行结果如下：
 
 ```sh
@@ -49,8 +48,7 @@ thread Thread-8 is running...
 Thread-8 10000
 thread Thread-8 ended.
 thread MainThread ended.
-```
-
+```python
 上面这种线程使用自己的局部变量的方法虽然可以避免多线程对同一变量的访问冲突，但还是有一些问题。在实际的开发中，我们会调用很多函数，每个函数又有很多个局部变量，这时每个函数都这么传参数显然是不可取的。为了解决这个问题，一个比较容易想到的做法就是创建一个全局字典，以线程的 ID 作为 key，线程的局部数据作为 value，这样就可以消除函数传参的问题，代码如下：
 
 ```python
@@ -83,11 +81,10 @@ if __name__ == '__main__':
         threads[i].join()
 
     print 'thread %s ended.' % current_thread().name
-```
-
+```python
 看下执行结果：
 
-```
+```python
 thread MainThread is running...
 thread Thread-64 is running...
 thread Thread-65 is running...
@@ -105,8 +102,7 @@ thread Thread-66 ended.
 Thread-64 10000
 thread Thread-64 ended.
 thread MainThread ended.
-```
-
+```python
 上面的做法虽然消除了函数传参的问题，但是还是有些不完美，为了获取线程的局部数据，我们需要先获取线程 ID，另外，global_dict 是个全局变量，所有线程都可以对它进行修改，还是有些危险。
 
 那到底如何是好？
@@ -143,13 +139,12 @@ if __name__ == '__main__':
         threads[i].join()
 
     print 'thread %s ended.' % current_thread().name
-```
-
+```python
 在上面的代码中，global_data 就是 ThreadLocal 对象，你可以把它当作一个全局变量，但它的每个属性，比如 `global_data.num` 都是线程的局部变量，没有访问冲突的问题。
 
 让我们看下执行结果：
 
-```
+```python
 thread MainThread is running...
 thread Thread-94 is running...
 thread Thread-95 is running...
@@ -167,4 +162,4 @@ thread Thread-98 ended.
 Thread-94 10000
 thread Thread-94 ended.
 thread MainThread ended.
-```
+```python

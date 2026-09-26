@@ -8,8 +8,7 @@ PDF是Portable Document Format的缩写，这类文件通常使用`.pdf`作为�
 
 ```Bash
 pip install PyPDF2
-```
-
+```python
 `PyPDF2`没有办法从PDF文档中提取图像、图表或其他媒体，但它可以提取文本，并将其返回为Python字符串。
 
 ```Python
@@ -18,8 +17,7 @@ import PyPDF2
 reader = PyPDF2.PdfFileReader('test.pdf')
 page = reader.getPage(0)
 print(page.extractText())
-```
-
+```python
 > **提示**：上面代码中使用的PDF文件“test.pdf”以及下面的代码中需要用到的PDF文件，也可以通过下面的百度云盘地址进行获取。链接:https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g 提取码:e7b4。
 
 当然，`PyPDF2`并不是什么样的PDF文档都能提取出文字来，这个问题就我所知并没有什么特别好的解决方法，尤其是在提取中文的时候。网上也有很多讲解从PDF中提取文字的文章，推荐大家自行阅读[《三大神器助力Python提取pdf文档信息》](https://cloud.tencent.com/developer/article/1395339)一文进行了解。
@@ -29,8 +27,7 @@ print(page.extractText())
 ```Bash
 pip install pdfminer.six
 pdf2text.py test.pdf
-```
-
+```python
 ### 旋转和叠加页面
 
 上面的代码中通过创建`PdfFileReader`对象的方式来读取PDF文档，该对象的`getPage`方法可以获得PDF文档的指定页并得到一个`PageObject`对象，通过`PageObject`对象的`rotateClockwise`和`rotateCounterClockwise`方法可以实现页面的顺时针和逆时针方向旋转，通过`PageObject`对象的`addBlankPage`方法可以添加一个新的空白页，代码如下所示。
@@ -61,8 +58,7 @@ page.rotateClockwise(90)
 # 通过Writer对象的write方法将PDF写入文件
 with open('resources/XGBoost-modified.pdf', 'wb') as file:
     writer.write(file)
-```
-
+```python
 ### 加密PDF文件
 
 使用`PyPDF2`中的`PdfFileWrite`对象可以为PDF文档加密，如果需要给一系列的PDF文档设置统一的访问口令，使用Python程序来处理就会非常的方便。
@@ -78,8 +74,7 @@ for page_num in range(reader.numPages):
 writer.encrypt('foobared')
 with open('resources/XGBoost-encrypted.pdf', 'wb') as file:
     writer.write(file)
-```
-
+```python
 ### 批量添加水印
 
 上面提到的`PageObject`对象还有一个名为`mergePage`的方法，可以两个PDF页面进行叠加，通过这个操作，我们很容易实现给PDF文件添加水印的功能。例如要给上面的“XGBoost.pdf”文件添加一个水印，我们可以先准备好一个提供水印页面的PDF文件，然后将包含水印的`PageObject`读取出来，然后再循环遍历“XGBoost.pdf”文件的每个页，获取到`PageObject`对象，然后通过`mergePage`方法实现水印页和原始页的合并，代码如下所示。
@@ -102,8 +97,7 @@ for page_num in range(reader1.numPages):
 # 将PDF写入文件
 with open('resources/XGBoost-watermarked.pdf', 'wb') as file:
     writer.write(file)
-```
-
+```python
 如果愿意，还可以让奇数页和偶数页使用不同的水印，大家可以自己思考下应该怎么做。
 
 ### 创建PDF文件
@@ -112,8 +106,7 @@ with open('resources/XGBoost-watermarked.pdf', 'wb') as file:
 
 ```Bash
 pip install reportlab
-```
-
+```python
 下面通过一个例子为大家展示`reportlab`的用法。
 
 ```Python
@@ -147,8 +140,7 @@ pdf_canvas.drawString(250, 250, 'hello, world!')
 
 # 保存
 pdf_canvas.save()
-```
-
+```python
 上面的代码如果不太理解也没有关系，等真正需要用Python创建PDF文档的时候，再好好研读一下`reportlab`的[官方文档](https://www.reportlab.com/docs/reportlab-userguide.pdf)就可以了。
 
 > **提示**：上面代码中用到的图片和字体，也可以通过下面的百度云盘链接获取。链接:https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g 提取码:e7b4。

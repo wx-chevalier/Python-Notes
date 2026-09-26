@@ -17,8 +17,7 @@ b'TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIH
 >>> content = b'TWFuIGlzIGRpc3Rpbmd1aXNoZWQsIG5vdCBvbmx5IGJ5IGhpcyByZWFzb24sIGJ1dCBieSB0aGlzIHNpbmd1bGFyIHBhc3Npb24gZnJvbSBvdGhlciBhbmltYWxzLCB3aGljaCBpcyBhIGx1c3Qgb2YgdGhlIG1pbmQsIHRoYXQgYnkgYSBwZXJzZXZlcmFuY2Ugb2YgZGVsaWdodCBpbiB0aGUgY29udGludWVkIGFuZCBpbmRlZmF0aWdhYmxlIGdlbmVyYXRpb24gb2Yga25vd2xlZGdlLCBleGNlZWRzIHRoZSBzaG9ydCB2ZWhlbWVuY2Ugb2YgYW55IGNhcm5hbCBwbGVhc3VyZS4='
 >>> base64.b64decode(content).decode()
 'Man is distinguished, not only by his reason, but by this singular passion from other animals, which is a lust of the mind, that by a perseverance of delight in the continued and indefatigable generation of knowledge, exceeds the short vehemence of any carnal pleasure.'
-```
-
+```python
 ### collections - 容器数据类型模块
 
 `collections`模块提供了诸多非常好用的数据结构，主要包括：
@@ -45,8 +44,7 @@ Card(suite='草花', face=9)
 红桃5
 >>> print(f'{card2.suite}{card2.face}')
 草花9
-```
-
+```python
 下面是使用`Counter`类统计列表中出现次数最多的三个元素的例子。
 
 ```Python
@@ -62,8 +60,7 @@ counter = Counter(words)
 # 打印words列表中出现频率最高的3个元素及其出现次数
 for elem, count in counter.most_common(3):
     print(elem, count)
-```
-
+```python
 ### hashlib - 哈希函数模块
 
 哈希函数又称哈希算法或散列函数，是一种为已有的数据创建“数字指纹”（哈希摘要）的方法。哈希函数把数据压缩成摘要，对于相同的输入，哈希函数可以生成相同的摘要（数字指纹），需要注意的是这个过程并不可逆（不能通过摘要计算出输入的内容）。一个优质的哈希函数能够为不同的输入生成不同的摘要，出现哈希冲突（不同的输入产生相同的摘要）的概率极低，[MD5](https://zh.wikipedia.org/wiki/MD5)、[SHA 家族](<[https://zh.wikipedia.org/wiki/SHA%E5%AE%B6%E6%97%8F](https://zh.wikipedia.org/wiki/SHA家族)>)就是这类好的哈希函数。
@@ -86,8 +83,7 @@ with open('Python-3.7.1.tar.xz', 'rb') as file:
         hasher.update(data)
         data = file.read(512)
 print(hasher.hexdigest())
-```
-
+```python
 > **说明**：很多网站在下载链接的旁边都提供了哈希摘要，完成文件下载后，我们可以计算该文件的哈希摘要并检查它与网站上提供的哈希摘要是否一致（指纹比对）。如果计算出的哈希摘要与网站提供的并不一致，很有可能是下载出错或该文件在传输过程中已经被篡改，这时候就不应该直接使用这个文件。
 
 ### heapq - 堆排序模块
@@ -115,8 +111,7 @@ list2 = [
 print(heapq.nlargest(3, list2, key=lambda x: x['price']))
 # 找出持有数量最高的三只股票
 print(heapq.nlargest(3, list2, key=lambda x: x['shares']))
-```
-
+```python
 ### itertools - 迭代工具模块
 
 `itertools`可以帮助我们生成各种各样的迭代器，大家可以看看下面的例子。
@@ -142,8 +137,7 @@ print(next(it))
 print(next(it))
 print(next(it))
 print(next(it))
-```
-
+```python
 ### random - 随机数和随机抽样模块
 
 这个模块我们之前已经用过很多次了，生成随机数、实现随机乱序和随机抽样，下面是常用函数的列表。
@@ -194,8 +188,7 @@ print(next(it))
 '62b066debaab11eaaa9c60f81da8d840'
 >>> uuid.uuid1().hex
 '642c0db0baab11eaaa9c60f81da8d840'
-```
-
+```python
 ### 简单的总结
 
 Python 标准库中有大量的模块，日常开发中有很多常见的任务在 Python 标准库中都有封装好的函数或类可供使用，这也是 Python 这门语言最可爱的地方。

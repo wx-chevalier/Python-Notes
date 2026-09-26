@@ -26,21 +26,19 @@ if __name__ == "__main__":
     t.start()
     t.join()
     print 'thread %s ended.' % current_thread().name
-```
-
+```python
 可以看到，创建一个新的线程，就是把一个函数和函数参数传给 Thread 实例，然后调用 start 方法开始执行。代码中的 current_thread 用于返回当前线程的实例。
 
 执行结果如下：
 
-```
+```python
 thread MainThread is running...
 hello world!
 thread TestThread is running...
 hello test
 thread TestThread ended.
 thread MainThread ended.
-```
-
+```python
 # 线程
 
 线程（thread）是进程（process）中的一个实体，一个进程至少包含一个线程。比如，对于视频播放器，显示视频用一个线程，播放音频用另一个线程。如果我们把进程看成一个容器，则线程是此容器的工作单位。进程和线程的区别主要有：
@@ -75,6 +73,5 @@ thread TestThread is running...
 hello test
 thread TestThread ended.
 thread MainThread ended.
-```
-
+```python
 可以看到，创建一个新的线程，就是把一个函数和函数参数传给 Thread 实例，然后调用 start 方法开始执行。代码中的 current_thread 用于返回当前线程的实例。

@@ -4,7 +4,7 @@
 [![Github downloads](https://img.shields.io/github/downloads/yidao620c/python3-cookbook/total.svg)](https://github.com/yidao620c/python3-cookbook/releases/latest)
 [![GitHub release](https://img.shields.io/github/release/yidao620c/python3-cookbook.svg)](https://github.com/yidao620c/python3-cookbook/releases)
 
-# 《Python Cookbook in Chinese》 3rd Edition 翻译 
+# 《Python Cookbook in Chinese》 3rd Edition 翻译
 
 《Python Cookbook》3rd 中文版3.0.0正式发布啦 ^_^！ ——2017/12/07
 
@@ -12,16 +12,16 @@
 
 最新版(3.0.0)下载
 
-* 中文简体版PDF下载地址：<https://pan.baidu.com/s/1pL1cI9d>
-* 中文繁体版PDF下载地址：<https://pan.baidu.com/s/1qX97VJI>
+- 中文简体版PDF下载地址：<https://pan.baidu.com/s/1pL1cI9d>
+- 中文繁体版PDF下载地址：<https://pan.baidu.com/s/1qX97VJI>
 
 ## 关于作者David Beazley
 
 本书作者是David Beazley大神，一位独立的计算机科学家、教育家，以及有着35年开发经验的软件开发者。
 他在Python社区一直都很活跃，编写了很多的[python包](http://www.dabeaz.com/software.html)，
-发表了很多的公开[演讲视频](http://www.dabeaz.com/talks.html) 以及 
+发表了很多的公开[演讲视频](http://www.dabeaz.com/talks.html) 以及
 [编程教程](http://www.dabeaz.com/tutorials.html)。
-同时还是[Python Essential Reference](http://www.dabeaz.com/per.html) 以及 
+同时还是[Python Essential Reference](http://www.dabeaz.com/per.html) 以及
 [ Python Cookbook (O'Reilly Media)](http://www.dabeaz.com/cookbook.html)的作者。
 
 David Beazley大神的博客地址：<http://www.dabeaz.com/>
@@ -47,16 +47,15 @@ David Beazley大神的博客地址：<http://www.dabeaz.com/>
 
 ![公众号](https://github.com/yidao620c/python3-cookbook/raw/master/exts/wuxiong.jpg)
 
-
 ## 项目说明
 
-* 所有文档均使用reStructuredText编辑，参考 [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
-* 当前文档生成托管在 [readthedocs](https://readthedocs.org/) 上
-* 生成的文档预览地址： [python3-cookbook](http://python3-cookbook.readthedocs.org/zh_CN/latest/)
-* 使用了python官方文档主题 [sphinx-rtd-theme](https://github.com/snide/sphinx_rtd_theme) ，也是默认的主题default.
-* 书中所有代码均在python 3.6版本下面运行通过，所有源码放在cookbook包下面
+- 所有文档均使用reStructuredText编辑，参考 [reStructuredText](http://docutils.sourceforge.net/docs/user/rst/quickref.html)
+- 当前文档生成托管在 [readthedocs](https://readthedocs.org/) 上
+- 生成的文档预览地址： [python3-cookbook](http://python3-cookbook.readthedocs.org/zh_CN/latest/)
+- 使用了python官方文档主题 [sphinx-rtd-theme](https://github.com/snide/sphinx_rtd_theme) ，也是默认的主题default.
+- 书中所有代码均在python 3.6版本下面运行通过，所有源码放在cookbook包下面
 
-```
+```python
 # on_rtd is whether we are on readthedocs.org, this line of code grabbed from docs.readthedocs.org
 on_rtd = os.environ.get('READTHEDOCS', None) == 'True'
 
@@ -66,8 +65,7 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
     html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # otherwise, readthedocs.org uses their theme by default, so no need to specify it
-```
-
+```python
 ## 其他贡献者
 
 排名不分先后：
@@ -107,18 +105,18 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 You are welcome to contribute to the project as follow
 
-* fork project and commit pull requests
-* add/edit wiki
-* report/fix issue
-* code review
-* commit new feature
-* add testcase
+- fork project and commit pull requests
+- add/edit wiki
+- report/fix issue
+- code review
+- commit new feature
+- add testcase
 
 Meanwhile you'd better follow the rules below
 
-* It's *NOT* recommended to submit a pull request directly to `master` branch. `develop` branch is more appropriate
-* Follow common Python coding conventions
-* Add the following [license] in each source file
+- It's *NOT* recommended to submit a pull request directly to `master` branch. `develop` branch is more appropriate
+- Follow common Python coding conventions
+- Add the following [license] in each source file
 
 ## License
 
@@ -126,16 +124,15 @@ Meanwhile you'd better follow the rules below
 
 Copyright (c) 2014-2018 [Xiong Neng](<https://www.xncoding.com/>) and other contributors
 
-Licensed under the Apache License, Version 2.0 (the "License"); 
+Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
        http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, 
-software distributed under the License is distributed on an "AS IS" BASIS, 
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and limitations under the License.
-
 
 [licensesvg]: https://img.shields.io/hexpm/l/plug.svg
 [license]: http://www.apache.org/licenses/LICENSE-2.0

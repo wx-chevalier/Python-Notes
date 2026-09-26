@@ -4,8 +4,7 @@ Setuptools 是 Python Distutils 的加强版，使开发者构建和发布 Pytho
 
 ```s
 $ pip install --upgrade setuptools
-```
-
+```python
 # 基础用例
 
 ```py
@@ -15,8 +14,7 @@ setup(
     version = "0.1",
     packages = find_packages(),
 )
-```
-
+```python
 上面就是一个最简单的 setup 脚本，使用该脚本，就可以产生 eggs，上传 PyPI，自动包含 setup.py 所在目录中的所有包等。当然，上面的脚本过于简单，下面是一个稍微复杂的例子：
 
 ```py
@@ -47,8 +45,7 @@ setup(
     url = "http://example.com/HelloWorld/",   # project home page, if any
     # could also include long_description, download_url, classifiers, etc.
 )
-```
-
+```python
 # 工具函数
 
 ## find_packages
@@ -65,8 +62,7 @@ setup(
     package_dir = {'':'lib'},
     packages = find_packages('lib'),
 )
-```
-
+```python
 源码树如下：
 
 ```s
@@ -76,8 +72,7 @@ lib/
     bar/
         __init__.py
         bar.py
-```
-
+```python
 最终生成的文件如下：
 
 ```s
@@ -96,22 +91,19 @@ lib/
 /usr/local/lib/python2.7/dist-packages/bar/__init__.py
 
 /usr/local/lib/python2.7/dist-packages/bar/__init__.pyc
-```
-
+```python
 如果没有 `package_dir = {'':'lib'}` 的话，则会报错：
 
 ```s
 error: package directory 'bar' does not exist
-```
-
+```python
 这是因为执行函数 find_packages('lib')，返回的结果是['bar']，没有 package_dir = {'':'lib'}的话，则在 setup.py 所在目录寻找包 bar，自然是找不到的了。
 
 ```s
 >>> import setuptools
 >>> setuptools.find_packages('lib')
 ['bar']
-```
-
+```python
 find_packages()函数遍历目标目录，根据 include 参数进行过滤，寻找 Python 包。对于 Python 3.2 以及之前的版本，只有包含 `__init__.py` 文件的目录才会被当做包。最后，对得到的结果进行过滤，去掉匹配 exclude 参数的包。include 和 exclude 参数是包名的列表，包名中的’.’表示父子关系。比如，如果源码树如下：
 
 ```s
@@ -121,8 +113,7 @@ lib/
     bar/
         __init__.py
         bar.py
-```
-
+```python
 则 find_packages(exclude=["lib"])（或 packages = find_packages(include=["lib"])），只是排除（或包含）lib 包，但是却不会排除（或包含 lib.bar）包。
 
 ## entry points
@@ -159,4 +150,4 @@ setup(
     extras_require = dict(reST = "Docutils>=0.3.5")
     ...
 )
-```
+```python

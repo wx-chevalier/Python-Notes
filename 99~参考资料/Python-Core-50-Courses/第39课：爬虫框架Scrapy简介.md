@@ -47,14 +47,12 @@ Scrapy 的整个数据处理流程由引擎进行控制，通常的运转流程�
 
 ```Shell
 pip install scrapy
-```
-
+```python
 在命令行中使用`scrapy`命令创建名为`demo`的项目。
 
 ```Bash
 scrapy startproject demo
-```
-
+```python
 项目的目录结构如下图所示。
 
 ```Shell
@@ -68,14 +66,12 @@ demo
 |________ pipelines.py
 |________ settings.py
 |____ scrapy.cfg
-```
-
+```python
 切换到`demo` 目录，用下面的命令创建名为`douban`的蜘蛛程序。
 
 ```Bash
 scrapy genspider douban movie.douban.com
-```
-
+```python
 #### 一个简单的例子
 
 接下来，我们实现一个爬取豆瓣电影 Top250 电影标题、评分和金句的爬虫。
@@ -84,7 +80,6 @@ scrapy genspider douban movie.douban.com
 
    ```Python
    import scrapy
-
 
    class DoubanItem(scrapy.Item):
        title = scrapy.Field()
@@ -100,7 +95,6 @@ scrapy genspider douban movie.douban.com
    from scrapy.http import HtmlResponse
 
    from demo.items import MovieItem
-
 
    class DoubanSpider(scrapy.Spider):
        name = 'douban'
@@ -128,7 +122,6 @@ scrapy genspider douban movie.douban.com
    from scrapy.http import HtmlResponse
 
    from demo.items import MovieItem
-
 
    class DoubanSpider(scrapy.Spider):
        name = 'douban'
@@ -172,7 +165,6 @@ scrapy genspider douban movie.douban.com
 
    from demo.items import MovieItem
 
-
    class DoubanSpider(scrapy.Spider):
        name = 'douban'
        allowed_domains = ['movie.douban.com']
@@ -198,7 +190,6 @@ scrapy genspider douban movie.douban.com
    import openpyxl
 
    from demo.items import MovieItem
-
 
    class MovieItemPipeline:
 

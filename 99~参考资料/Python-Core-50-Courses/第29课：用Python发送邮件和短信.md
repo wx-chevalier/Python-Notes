@@ -44,8 +44,7 @@ smtp_obj.sendmail(
     ['yyyyyy@qq.com', 'zzzzzz@1000phone.com'],
     email.as_string()
 )
-```
-
+```python
 如果要发送带有附件的邮件，只需要将附件的内容处理成 BASE64 编码，那么它就和普通的文本内容几乎没有什么区别。BASE64 是一种基于 64 个可打印字符来表示二进制数据的表示方法，常用于某些需要表示、传输、存储二进制数据的场合，电子邮件就是其中之一。对这种编码方式不理解的同学，推荐阅读[《Base64 笔记》](http://www.ruanyifeng.com/blog/2008/06/base64.html)一文。在之前的内容中，我们也提到过，Python 标准库的`base64`模块提供了对 BASE64 编解码的支持。
 
 下面的代码演示了如何发送带附件的邮件。
@@ -91,8 +90,7 @@ smtp_obj.sendmail(
     'zzzzzzzz@1000phone.com',
     email.as_string()
 )
-```
-
+```python
 为了方便大家用 Python 实现邮件发送，我将上面的代码封装成了函数，使用的时候大家只需要调整邮件服务器域名、端口、用户名和授权码就可以了。
 
 ```Python
@@ -110,7 +108,6 @@ EMAIL_PORT = 465
 EMAIL_USER = 'xxxxxxxxx@126.com'
 # 开通SMTP服务的授权码（自行修改）
 EMAIL_AUTH = '邮件服务器的授权码'
-
 
 def send_email(*, from_user, to_users, subject='', content='', filenames=[]):
     """发送邮件
@@ -141,8 +138,7 @@ def send_email(*, from_user, to_users, subject='', content='', filenames=[]):
     smtp = smtplib.SMTP_SSL(EMAIL_HOST, EMAIL_PORT)
     smtp.login(EMAIL_USER, EMAIL_AUTH)
     smtp.sendmail(from_user, to_users.split(';'), email.as_string())
-```
-
+```python
 ### 发送短信
 
 发送短信也是项目中常见的功能，网站的注册码、验证码、营销信息基本上都是通过短信来发送给用户的。发送短信需要三方平台的支持，下面我们以[螺丝帽平台](https://luosimao.com/)为例，为大家介绍如何用 Python 程序发送短信。注册账号和购买短信服务的细节我们不在这里进行赘述，大家可以咨询平台的客服。
@@ -155,7 +151,6 @@ def send_email(*, from_user, to_users, subject='', content='', filenames=[]):
 import random
 
 import requests
-
 
 def send_message_by_luosimao(tel, message):
     """发送短信（调用螺丝帽短信网关）"""
@@ -171,22 +166,18 @@ def send_message_by_luosimao(tel, message):
     )
     return resp.json()
 
-
 def gen_mobile_code(length=6):
     """生成指定长度的手机验证码"""
     return ''.join(random.choices('0123456789', k=length))
-
 
 def main():
     code = gen_mobile_code()
     message = f'您的短信验证码是{code}，打死也不能告诉别人哟！【Python小课】'
     print(send_message_by_luosimao('13500112233', message))
 
-
 if __name__ == '__main__':
     main()
-```
-
+```python
 上面请求螺丝帽的短信网关`http://sms-api.luosimao.com/v1/send.json`会返回 JSON 格式的数据，如果返回`{'error': 0, 'msg': 'OK'}`就说明短信已经发送成功了，如果`error`的值不是`0`，可以通过查看官方的[开发文档](https://luosimao.com/docs/api/)了解到底哪个环节出了问题。螺丝帽平台常见的错误类型如下图所示。
 
 <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210820195505.png" alt="image-20210820195505761" style="zoom:50%;">

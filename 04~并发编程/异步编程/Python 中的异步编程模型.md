@@ -32,8 +32,7 @@ def task():
 t = threading.Thread(target=task)
 t.start()
 t.join()
-```
-
+```python
 ---
 
 ### 2.2 多进程（multiprocessing）
@@ -66,8 +65,7 @@ def task():
 p = Process(target=task)
 p.start()
 p.join()
-```
-
+```python
 ---
 
 ### 2.3 协程（coroutine）
@@ -98,8 +96,7 @@ async def task():
     print("协程任务执行中")
 
 asyncio.run(task())
-```
-
+```python
 ---
 
 ### 2.4 对比总结
@@ -120,5 +117,5 @@ asyncio.run(task())
 
 ---
 
-**小结**：  
+**小结**：
 Python 提供了多种异步编程模型，选择合适的模型需根据任务类型（I/O 密集 or CPU 密集）、并发量、资源消耗等因素综合考虑。现代异步编程推荐使用 `asyncio` 和 `async/await` 语法，既高效又易于维护。
