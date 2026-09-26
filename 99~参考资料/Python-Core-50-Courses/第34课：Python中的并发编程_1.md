@@ -66,14 +66,6 @@ import random
 import time
 from threading import Thread
 
-def download(*, filename):
-    start = time.time()
-    print(f'开始下载 {filename}.')
-    time.sleep(random.randint(3, 6))
-    print(f'{filename} 下载完成.')
-    end = time.time()
-    print(f'下载耗时: {end - start:.3f}秒.')
-
 def main():
     threads = [
         Thread(target=download, kwargs={'filename': 'Python从入门到住院.pdf'}),
@@ -165,14 +157,6 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from threading import Thread
 
-def download(*, filename):
-    start = time.time()
-    print(f'开始下载 {filename}.')
-    time.sleep(random.randint(3, 6))
-    print(f'{filename} 下载完成.')
-    end = time.time()
-    print(f'下载耗时: {end - start:.3f}秒.')
-
 def main():
     with ThreadPoolExecutor(max_workers=4) as pool:
         filenames = ['Python从入门到住院.pdf', 'MySQL从删库到跑路.avi', 'Linux从精通到放弃.mp4']
@@ -212,11 +196,6 @@ if __name__ == '__main__':
 ```Python
 import time
 from threading import Thread
-
-def display(content):
-    while True:
-        print(content, end='', flush=True)
-        time.sleep(0.1)
 
 def main():
     Thread(target=display, args=('Ping', ), daemon=True).start()
@@ -290,14 +269,6 @@ class Account(object):
             # 释放锁
             self.lock.release()
 
-def main():
-    """主函数"""
-    account = Account()
-    with ThreadPoolExecutor(max_workers=16) as pool:
-        for _ in range(100):
-            pool.submit(account.deposit, 1)
-    print(account.balance)
-
 if __name__ == '__main__':
     main()
 ```
@@ -322,14 +293,6 @@ class Account(object):
             new_balance = self.balance + money
             time.sleep(0.01)
             self.balance = new_balance
-
-def main():
-    """主函数"""
-    account = Account()
-    with ThreadPoolExecutor(max_workers=16) as pool:
-        for _ in range(100):
-            pool.submit(account.deposit, 1)
-    print(account.balance)
 
 if __name__ == '__main__':
     main()

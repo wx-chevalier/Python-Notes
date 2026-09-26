@@ -93,13 +93,6 @@ smtp_obj.sendmail(
 ```
 为了方便大家用 Python 实现邮件发送，我将上面的代码封装成了函数，使用的时候大家只需要调整邮件服务器域名、端口、用户名和授权码就可以了。
 
-```Python
-import smtplib
-from email.header import Header
-from email.mime.multipart import MIMEMultipart
-from email.mime.text import MIMEText
-from urllib.parse import quote
-
 # 邮件服务器域名（自行修改）
 EMAIL_HOST = 'smtp.126.com'
 # 邮件服务端口（通常是465）

@@ -110,13 +110,6 @@ def calc():
 if __name__ == '__main__':
     print 'thread %s is running...' % current_thread().name
 
-    threads = []
-    for i in range(5):
-        threads.append(Thread(target=calc))
-        threads[i].start()
-    for i in range(5):
-        threads[i].join()
-
     print 'global num: %d' % num
     print 'thread %s ended.' % current_thread().name
 ```

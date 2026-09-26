@@ -116,17 +116,7 @@ scrapy genspider douban movie.douban.com
 
    如果还要生成后续爬取的请求，我们可以用`yield`产出`Request`对象。`Request`对象有两个非常重要的属性，一个是`url`，它代表了要请求的地址；一个是`callback`，它代表了获得响应之后要执行的回调函数。我们可以将上面的代码稍作修改。
 
-   ```Python
-   import scrapy
-   from scrapy import Selector, Request
-   from scrapy.http import HtmlResponse
-
    from demo.items import MovieItem
-
-   class DoubanSpider(scrapy.Spider):
-       name = 'douban'
-       allowed_domains = ['movie.douban.com']
-       start_urls = ['https://movie.douban.com/top250?start=0&filter=']
 
        def parse(self, response: HtmlResponse):
            sel = Selector(response)
@@ -158,11 +148,6 @@ scrapy genspider douban movie.douban.com
 
    不知大家是否注意到，通过运行爬虫获得的 JSON 文件中有`275`条数据，那是因为首页被重复爬取了。要解决这个问题，可以对上面的代码稍作调整，不在`parse`方法中解析获取新页面的 URL，而是通过`start_requests`方法提前准备好待爬取页面的 URL，调整后的代码如下所示。
 
-   ```Python
-   import scrapy
-   from scrapy import Selector, Request
-   from scrapy.http import HtmlResponse
-
    from demo.items import MovieItem
 
    class DoubanSpider(scrapy.Spider):
@@ -172,17 +157,6 @@ scrapy genspider douban movie.douban.com
        def start_requests(self):
            for page in range(10):
                yield Request(url=f'https://movie.douban.com/top250?start={page * 25}')
-
-       def parse(self, response: HtmlResponse):
-           sel = Selector(response)
-           movie_items = sel.css('#content > div > div.article > ol > li')
-           for movie_sel in movie_items:
-               item = MovieItem()
-               item['title'] = movie_sel.css('.title::text').extract_first()
-               item['score'] = movie_sel.css('.rating_num::text').extract_first()
-               item['motto'] = movie_sel.css('.inq::text').extract_first()
-               yield item
-   ```
 
 3. 如果希望完成爬虫数据的持久化，可以在数据管道中处理蜘蛛程序产生的`Item`对象。例如，我们可以通过前面讲到的`openpyxl`操作 Excel 文件，将数据写入 Excel 文件中，代码如下所示。
 
