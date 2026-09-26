@@ -6,7 +6,7 @@
 # 一个典型的函数注释例子，为参数加上了类型
 def greeting(name: str) -> str:
     return 'Hello ' + name
-```python
+```
 # Typing Basic | 类型机制
 
 ## Type Alias | 类型别名
@@ -19,7 +19,7 @@ def scale(scalar: float, vector: Vector)->Vector:
     return [scalar*num for num in vector]
 
 new_vector = scale(2.0, [1.0, -4.2, 5.4])
-```python
+```
 类型别名有助于简化一些复杂的类型声明：
 
 ```py
@@ -38,7 +38,7 @@ def broadcast_message(
         message: str,
         servers: List[Tuple[Tuple[str, int], Dict[str, str]]]) -> None:
     pass
-```python
+```
 ## New Type | 新类型
 
 使用 NewType 来辅助函数创造不同的类型：
@@ -48,7 +48,7 @@ from typing import NewType
 
 UserId = NewType("UserId", int)
 some_id = UserId(524313)
-```python
+```
 静态类型检查器将将新类型视为原始类型的子类。这对于帮助捕获逻辑错误非常有用：
 
 ```py
@@ -60,7 +60,7 @@ user_a = get_user_name(UserId(42351))
 
 # does not typecheck; an int is not a UserId
 user_b = get_user_name(-1)
-```python
+```
 # Primitives | 基础类型
 
 ## Any
@@ -82,7 +82,7 @@ def foo(item: Any) -> int:
     # and that type might have a 'bar' method
     item.bar()
     ...
-```python
+```
 # Function | 函数
 
 ## Callable | 回调
@@ -98,7 +98,7 @@ def feeder(get_next_item: Callable[[], str]) -> None:
 def async_query(on_success: Callable[[int], None],
                 on_error: Callable[[int, Exception], None]) -> None:
     # Body
-```python
+```
 # Generic | 泛型
 
 因为容器中的元素的类型信息由于泛型不同通过一般方式静态推断，因此抽象类被用来拓展表示容器中的元素：
@@ -108,7 +108,7 @@ from typing import Mapping, Sequence
 
 def notify_by_email(employees: Sequence[Employee],
                     overrides: Mapping[str, str]) -> None: ...
-```python
+```
 可以通过 typing 中的 TypeVar 将泛型参数化：
 
 ```py
@@ -118,7 +118,7 @@ T = TypeVar('T')      # 申明类型变量
 
 def first(l: Sequence[T]) -> T:   # Generic function
     return l[0]
-```python
+```
 定义了 `Generic[T]` 作为 LoggedVar 的基类，同时 T 也作为了方法中的参数。
 
 ```py
@@ -143,4 +143,4 @@ class LoggedVar(Generic[T]):
 
     def log(self, message: str) -> None:
         self.logger.info('%s: %s', self.name, message)
-```python
+```

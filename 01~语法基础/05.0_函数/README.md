@@ -17,7 +17,7 @@ def hello(name):
 >>> r = hello('ethan')
 >>> r
 'ethan'
-```python
+```
 在上面，我们定义了一个函数。函数名是 `hello`；函数有一个参数，参数名是 name；函数有一个返回值，name。我们也可以定义一个没有参数和返回值的函数：
 
 ```python
@@ -27,7 +27,7 @@ def greet():              # 没有参数
 >>> r = greet()
 hello world
 >>> r == None
-```python
+```
 这里，函数 `greet` 没有参数，它也没有返回值（或者说是 None）。我们还可以定义返回多个值的函数：
 
 ```python
@@ -40,4 +40,4 @@ hello world
 (2, 6, 10)
 >>> type(result)
 <type 'tuple'>
-```python
+```

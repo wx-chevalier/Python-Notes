@@ -297,32 +297,32 @@ macOS 系统安装 MySQL 是比较简单的，只需要从刚才说到的官方�
 
 ```SQL
 show databases;
-```python
+```
 2. 查看所有字符集
 
 ```SQL
 show character set;
-```python
+```
 3. 查看所有的排序规则
 
 ```SQL
 show collation;
-```python
+```
 4. 查看所有的引擎
 
 ```SQL
 show engines;
-```python
+```
 5. 查看所有日志文件
 
 ```SQL
 show binary logs;
-```python
+```
 6. 查看数据库下所有表
 
 ```SQL
 show tables;
-```python
+```
 #### 获取帮助
 
 在 MySQL 命令行工具中，可以使用`help`命令或`?`来获取帮助，如下所示。

@@ -10,7 +10,7 @@
 151.101.184.133    gist.githubusercontent.com
 151.101.184.133    cloud.githubusercontent.com
 151.101.184.133    camo.githubusercontent.com
-```python
+```
 ### 视频资源
 
 1. [《Python 零基础教程快速上手》](https://www.bilibili.com/video/BV1FT4y1R7sz) - Python 基础部分的视频，因为随堂录制，有的时候声音会有点小，点赞过 3000 就为大家重新录制一套声音和画面都更好的精讲版视频。

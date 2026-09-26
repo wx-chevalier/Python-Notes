@@ -13,19 +13,19 @@ The html version of this guide is built with [sphinx](http://www.sphinx-doc.org/
 
 ``` bash
 pip install --user sphinx
-```python
+```
 Then navigate to the directory of the Makefile and ```make build``` or ```make html```. Sphinx will then generate the HTML in a folder called `_build/html/`
 
 After navigating to this folder, you can then use Python's built in web server to view your changes locally:
 
 ``` bash
 python3 -m http.server
-```python
+```
 By default, `http.server` listens on every IP address bound on your host on port 8000. To bind to a specific one, say, localhost on port 8005:
 
 ``` bash
 python3 -m http.server 8005 --bind 127.0.0.1
-```python
+```
 Style Guide
 -----------
 

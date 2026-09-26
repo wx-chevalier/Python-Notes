@@ -29,7 +29,7 @@ with open('scores.csv', 'w') as file:
         scores = [random.randrange(50, 101) for _ in range(3)]
         scores.insert(0, name)
         writer.writerow(scores)
-```python
+```
 生成的CSV文件的内容。
 
 ```python
@@ -39,12 +39,12 @@ with open('scores.csv', 'w') as file:
 赵云,95,73,70
 马超,83,97,55
 黄忠,61,54,87
-```python
+```
 需要说明的是上面的`writer`函数，除了传入要写入数据的文件对象外，还可以`dialect`参数，它表示CSV文件的方言，默认值是`excel`。除此之外，还可以通过`delimiter`、`quotechar`、`quoting`参数来指定分隔符（默认是逗号）、包围值的字符（默认是双引号）以及包围的方式。其中，包围值的字符主要用于当字段中有特殊符号时，通过添加包围值的字符可以避免二义性。大家可以尝试将上面第5行代码修改为下面的代码，然后查看生成的CSV文件。
 
 ```Python
 writer = csv.writer(file, delimiter='|', quoting=csv.QUOTE_ALL)
-```python
+```
 生成的CSV文件的内容。
 
 ```python
@@ -54,7 +54,7 @@ writer = csv.writer(file, delimiter='|', quoting=csv.QUOTE_ALL)
 "赵云"|"78"|"55"|"76"
 "马超"|"72"|"77"|"68"
 "黄忠"|"70"|"72"|"51"
-```python
+```
 ### 从CSV文件读取数据
 
 如果要读取刚才创建的CSV文件，可以使用下面的代码，通过`csv`模块的`reader`函数可以创建出`csvreader`对象，该对象是一个迭代器，可以通过`next`函数或`for-in`循环读取到文件中的数据。
@@ -69,7 +69,7 @@ with open('scores.csv', 'r') as file:
         for elem in data_list:
             print(elem, end='\t')
         print()
-```python
+```
 > **注意**：上面的代码对`csvreader`对象做`for`循环时，每次会取出一个列表对象，该列表对象包含了一行中所有的字段。
 
 ###  简单的总结

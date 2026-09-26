@@ -34,7 +34,7 @@ def simple_coroutine():
 coro = simple_coroutine()
 next(coro)         # 启动协程，执行到第一个 yield
 coro.send(42)      # 恢复协程，向 yield 发送值
-```python
+```
 #### 2. `yield from` 语法（简化协程嵌套）
 
 - `yield from` 可以将一个生成器的控制权委托给另一个生成器，简化多层嵌套。
@@ -52,7 +52,7 @@ def delegator():
 
 for i in delegator():
     print(i)  # 输出 1, 2, 3
-```python
+```
 #### 3. 原生协程（async/await，现代推荐方式）
 
 - Python 3.5+ 引入 `async def` 和 `await`，支持原生协程。
@@ -69,7 +69,7 @@ async def hello():
     print("... World!")
 
 asyncio.run(hello())
-```python
+```
 ### 3.4 协程的调度与事件循环
 
 - 协程本身不会自动运行，需要事件循环（如 `asyncio`）来调度和管理。

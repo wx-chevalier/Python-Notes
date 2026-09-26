@@ -26,7 +26,7 @@ for i in range(4):
 # Wait for the tasks to complete and retrieve the results.
 # With at least 4 cores, this will take 1 second.
 results = ray.get(result_ids)  # [0, 1, 2, 3]
-```python
+```
 因为对 f.remote(i) 的调用会立即返回，所以运行这行代码四次就可以并行执行 f 的四个副本。
 
 ## 任务依赖
@@ -50,7 +50,7 @@ z_id = multiply_matrices.remote(x_id, y_id)
 
 # Get the results.
 z = ray.get(z_id)
-```python
+```
 ## 值聚合
 
 就像经典的 WordCount 程序，我们常常需要将值聚合起来。但在很多应用程序中，跨多台计算机聚合大型向量可能会造成性能瓶颈。在这个时候，只要修改一行代码就可以将聚合的运行时间从线性降为对数级别，即聚合值的数量。
@@ -84,7 +84,7 @@ id5 = add.remote(id1, id2)
 id6 = add.remote(id3, id4)
 id7 = add.remote(id5, id6)
 result = ray.get(id7)
-```python
+```
 ![](https://ww1.sinaimg.cn/large/007rAy9hgy1g0egpe5ntnj30q20akdgs.jpg)
 
 代码还可以进一步简化：
@@ -101,7 +101,7 @@ values = [1, 2, 3, 4, 5, 6, 7, 8]
 while len(values) > 1:
    values = values[2:] + [add.remote(values[0], values[1])]
 result = ray.get(values[0])
-```python
+```
 # Actor
 
 可以使用 @ray.remote 装饰器声明一个 Python 类。在实例化类时，Ray 会创建一个新的“actor”，这是一个运行在集群中并持有类对象副本的进程。对这个 actor 的方法调用转变为在 actor 进程上运行的任务，并且可以访问和改变 actor 的状态。通过这种方式，可以在多个任务之间共享可变状态，这是远程函数无法做到的。
@@ -130,7 +130,7 @@ print(ray.get(c.get_value.remote()))# 0
 c.inc.remote()
 c.inc.remote()
 print(ray.get(c.get_value.remote()))# 2
-```python
+```
 上面的例子是 actor 最简单的用法。Counter.remote() 创建一个新的 actor 进程，它持有一个 Counter 对象副本。对 c.get_value.remote() 和 c.inc.remote() 的调用会在远程 actor 进程上执行任务并改变 actor 的状态。
 
 ## 句柄
@@ -182,4 +182,4 @@ for _ in range(100):
 # New messages: ['Message 3 from actor 2.', 'Message 3 from actor 1.', 'Message 3 from actor 0.']
 # New messages: ['Message 4 from actor 2.', 'Message 4 from actor 0.', 'Message 4 from actor 1.']
 # New messages: ['Message 5 from actor 2.', 'Message 5 from actor 0.', 'Message 5 from actor 1.']
-```python
+```

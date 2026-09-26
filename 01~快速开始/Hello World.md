@@ -67,7 +67,7 @@ if __name__ == '__main__':
     print("End MyApp")
     # remove pid file
     appInstance.exitApplication()
-```python
+```
 # 输入输出
 
 Python2 提供了 input，raw_input，print 等用于输入输出，但在 Python3 中发生了一些改变，raw_input 已经没有了，input 的用法发生了变化，print 也从原来的语句变成了一个函数。
@@ -97,18 +97,18 @@ please enter a+b: 3+6             # 输入一个表达式
 '3+6'
 >>> type(sum)
 <type 'str'>
-```python
+```
 可以看到，不管我们输入一个字符串、数值还是表达式，raw_input 都直接返回一个字符串。`input` 的用法跟 `raw_input` 类似，形式如下：
 
 ```python
 input(prompt)
-```python
+```
 事实上，`input` 本质上是使用 `raw_input` 实现的，如下：
 
 ```python
 def input(prompt):
     return (eval(raw_input(prompt)))
-```python
+```
 也就是说，调用 `input` 实际上是通过调用 `raw_input` 再调用 `eval` 函数实现的。这里的 `eval` 通常用来执行一个字符串表达式，并返回表达式的值，它的基本用法如下：
 
 ```python
@@ -117,7 +117,7 @@ def input(prompt):
 >>> a = 1
 >>> eval('a+9')
 10
-```python
+```
 现在，让我们看看 `input` 的用法：
 
 ```python
@@ -151,7 +151,7 @@ please enter a+b: 3+6
 please enter a+b: '3'+'6'
 >>> sum
 '36'
-```python
+```
 可以看到，使用 `input` 的时候，如果输入的是字符串，必须使用引号把它们括起来；如果输入的是数值类型，则返回的也是数值类型；如果输入的是表达式，会对表达式进行运算。Python3 中的 input 就是 Python2 中的 raw_input，也就是说，原 Python2 中的 raw_input 被重命名为 input 了。
 
 ## 输出
@@ -179,7 +179,7 @@ abc
 10
 >>> print(d)
 {'a': 1, 'b': 2}
-```python
+```
 有时，我们需要对输出进行一些格式化，比如限制小数的精度等，直接看几个例子：
 
 ```sh
@@ -195,7 +195,7 @@ the length of hello is 5
 000003.142
 >>> print('%+f' % pi)        # 显示正负号
 +3.141590
-```python
+```
 在 Python3 中使用 print 跟 Python2 差别不大，不过要注意的是在 Python3 中使用 print 必须加括号，否则会抛出 SyntaxError。另外，如果不想 print 换行输出，可以参考下面的方式：
 
 ```python
@@ -209,4 +209,4 @@ the length of hello is 5
 ...     print(i, end='')    # 加上一个 end 参数
 ...
 012
-```python
+```

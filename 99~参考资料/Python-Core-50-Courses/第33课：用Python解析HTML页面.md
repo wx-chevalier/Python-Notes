@@ -20,7 +20,7 @@
         <!-- 页面的主体，显示在浏览器窗口中的内容 -->
     </body>
 </html>
-```python
+```
 标签、层叠样式表（CSS）、JavaScript 是构成 HTML 页面的三要素，其中标签用来承载页面要显示的内容，CSS 负责对页面的渲染，而 JavaScript 用来控制页面的交互式行为。要实现 HTML 页面的解析，可以使用 XPath 的语法，它原本是 XML 的一种查询语法，可以根据 HTML 标签的层次结构提取标签中的内容或标签属性；此外，也可以使用 CSS 选择器来定位页面元素，就跟用 CSS 渲染页面元素是同样的道理。
 
 ### XPath 解析
@@ -39,7 +39,7 @@ XPath 是在 XML（eXtensible Markup Language）文档中查找信息的一种�
       <price>39.95</price>
     </book>
 </bookstore>
-```python
+```
 对于上面的 XML 文件，我们可以用如下所示的 XPath 语法获取文档中的节点。
 
 | 路径表达式                           | 结果                                                                                            |
@@ -82,7 +82,7 @@ XPath 还支持通配符用法，如下所示。
 
 ```Bash
 pip install lxml
-```python
+```
 下面我们用 XPath 解析方式改写之前获取豆瓣电影 Top250 的代码，如下所示。
 
 ```Python
@@ -101,14 +101,14 @@ for page in range(1, 11):
     rank_spans = tree.xpath('//*[@id="content"]/div/div[1]/ol/li[1]/div/div[2]/div[2]/div/span[2]')
     for title_span, rank_span in zip(title_spans, rank_spans):
         print(title_span.text, rank_span.text)
-```python
+```
 ### CSS 选择器解析
 
 对于熟悉 CSS 选择器和 JavaScript 的开发者来说，通过 CSS 选择器获取页面元素可能是更为简单的选择，因为浏览器中运行的 JavaScript 本身就可以`document`对象的`querySelector()`和`querySelectorAll()`方法基于 CSS 选择器获取页面元素。在 Python 中，我们可以利用三方库`beautifulsoup4`或`pyquery`来做同样的事情。Beautiful Soup 可以用来解析 HTML 和 XML 文档，修复含有未闭合标签等错误的文档，通过为待解析的页面在内存中创建一棵树结构，实现对从页面中提取数据操作的封装。可以用下面的命令来安装 Beautiful Soup。
 
 ```Python
 pip install beautifulsoup4
-```python
+```
 下面是使用`bs4`改写的获取豆瓣电影 Top250 电影名称的代码。
 
 ```Python
@@ -128,7 +128,7 @@ for page in range(1, 11):
     rank_spans = soup.select('div.info > div.bd > div > span.rating_num')
     for title_span, rank_span in zip(title_spans, rank_spans):
         print(title_span.text, rank_span.text)
-```python
+```
 关于 BeautifulSoup 更多的知识，可以参考它的[官方文档](https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/)。
 
 ### 简单的总结

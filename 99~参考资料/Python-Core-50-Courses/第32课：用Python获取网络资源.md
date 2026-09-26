@@ -16,7 +16,7 @@ import requests
 resp = requests.get('https://www.sohu.com/')
 if resp.status_code == 200:
     print(resp.text)
-```python
+```
 > **说明**：上面代码中的变量`resp`是一个`Response`对象（`requests`库封装的类型），通过该对象的`status_code`属性可以获取响应状态码，而该对象的`text`属性可以帮我们获取到页面的 HTML 代码。
 
 由于`Response`对象的`text`是一个字符串，所以我们可以利用之前讲过的正则表达式的知识，从页面的 HTML 代码中提取新闻的标题和链接，代码如下所示。
@@ -33,7 +33,7 @@ if resp.status_code == 200:
     for href, title in all_matches:
         print(href)
         print(title)
-```python
+```
 除了文本内容，我们也可以使用`requests`库通过 URL 获取二进制资源。下面的例子演示了如何获取百度 Logo 并保存到名为`baidu.png`的本地文件中。可以在百度的首页上右键点击百度 Logo，并通过“复制图片地址”菜单项获取图片的 URL。
 
 ```Python
@@ -42,7 +42,7 @@ import requests
 resp = requests.get('https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png')
 with open('baidu.png', 'wb') as file:
     file.write(resp.content)
-```python
+```
 > **说明**：`Response`对象的`content`属性可以获得服务器响应的二进制数据。
 
 `requests`库非常好用而且功能上也比较强大和完整，具体的内容我们在使用的过程中为大家一点点剖析。想解锁关于`requests`库更多的知识，可以阅读它的[官方文档](https://docs.python-requests.org/zh_CN/latest/)。
@@ -79,7 +79,7 @@ for page in range(1, 11):
         print(title, rank)
     # 随机休眠1-5秒，避免爬取页面过于频繁
     time.sleep(random.random() * 4 + 1)
-```python
+```
 > **说明**：通过分析豆瓣网的 robots 协议，我们发现豆瓣网并不拒绝百度爬虫获取它的数据，因此我们也可以将爬虫伪装成百度的爬虫，将`get`函数的`headers`参数修改为：`headers={'User-Agent': 'BaiduSpider'}`。
 
 ### 使用 IP 代理
@@ -120,7 +120,7 @@ for page in range(1, 11):
     ranks = pattern2.findall(resp.text)
     for title, rank in zip(titles, ranks):
         print(title, rank)
-```python
+```
 > **说明**：上面的代码需要修改`APP_KEY`为自己创建的订单对应的`Appkey`值，这个值可以在用户中心用户订单中查看到。蘑菇代理提供了免费的 API 代理和 HTTP 隧道代理试用，但是试用的代理接通率不能保证，建议大家还是直接购买一个在自己支付能力范围内的代理服务来体验。
 >
 > **另注**：蘑菇代理目前已经停止服务了，大家可以按照上面讲解的方式使用其他商业代理即可。

@@ -9,13 +9,13 @@
 ```python
 from lxml import html
 import requests
-```python
+```
 下一步我们将使用 `requests.get` 来从 web 页面中取得我们的数据，通过使用 `html` 模块解析它，并将结果保存到 `tree` 中。
 
 ```python
 page = requests.get('http://econpy.pythonanywhere.com/ex/001.html')
 tree = html.fromstring(page.text)
-```python
+```
 `tree` 现在包含了整个 HTML 文件到一个优雅的树结构中，我们可以使用两种 方法访问：XPath 以及 CSS 选择器。在这个例子中，我们将选择前者。
 
 XPath 是一种在结构化文档（如 HTML 或 XML）中定位信息的方式。一个关于 XPath 的 不错的介绍参见 [W3Schools](http://www.w3schools.com/xml/xpath_intro.asp) 。
@@ -27,7 +27,7 @@ XPath 是一种在结构化文档（如 HTML 或 XML）中定位信息的方式�
 ```html
 <div title="buyer-name">Carson Busses</div>
 <span class="item-price">$29.95</span>
-```python
+```
 知道这个后，我们可以创建正确的 XPath 查询并且使用 lxml 的 `xpath` 函数，像下面这样：
 
 ```py
@@ -35,7 +35,7 @@ XPath 是一种在结构化文档（如 HTML 或 XML）中定位信息的方式�
 buyers = tree.xpath('//div[@title="buyer-name"]/text()')
 #这将创建prices的列表：
 prices = tree.xpath('//span[@class="item-price"]/text()')
-```python
+```
 让我们看看我们得到了什么：
 
 ```python
@@ -51,5 +51,5 @@ Prices:  ['$29.95', '$8.37', '$15.26', '$19.25', '$19.25',
 '$13.99', '$31.57', '$8.49', '$14.47', '$15.86', '$11.11',
 '$15.98', '$16.27', '$7.50', '$50.85', '$14.26', '$5.68',
 '$15.00', '$114.07', '$10.09']
-```python
+```
 恭喜！我们已经成功地通过 lxml 与 Request，从一个 web 页面中抓取了所有我们想要的 数据。我们将它们以列表的形式存在内存中。现在我们可以对它做各种很酷的事情了：我们可以使用 Python 分析它，或者我们可以将之保存为一个文件并向世界分享。

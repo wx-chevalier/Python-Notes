@@ -8,7 +8,7 @@
 
 ```bash
 pip install python-docx
-```python
+```
 按照[官方文档](https://python-docx.readthedocs.io/en/latest/)的介绍，我们可以使用如下所示的代码来生成一个简单的 Word 文档。
 
 ```Python
@@ -80,7 +80,7 @@ document.add_page_break()
 
 # 保存文档
 document.save('demo.docx')
-```python
+```
 > **提示**：上面代码第 7 行中的注释`# type: Doc`是为了在 PyCharm 中获得代码补全提示，因为如果不清楚对象具体的数据类型，PyCharm 无法在后续代码中给出`Doc`对象的代码补全提示。
 
 执行上面的代码，打开生成的 Word 文档，效果如下图所示。
@@ -96,7 +96,7 @@ from docx.document import Document as Doc
 doc = Document('resources/离职证明.docx')  # type: Doc
 for no, p in enumerate(doc.paragraphs):
     print(no, p.text)
-```python
+```
 > **提示**：如果需要上面代码中的 Word 文件，可以通过下面的百度云盘地址进行获取。链接:https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g 提取码:e7b4。
 
 读取到的内容如下所示。
@@ -112,7 +112,7 @@ for no, p in enumerate(doc.paragraphs):
 7
 8 公司名称（盖章）:成都风车车科技有限公司
 9    			2020 年 6 月 28 日
-```python
+```
 讲到这里，相信很多读者已经想到了，我们可以把上面的离职证明制作成一个模板文件，把姓名、身份证号、入职和离职日期等信息用占位符代替，这样通过对占位符的替换，就可以根据实际需要写入对应的信息，这样就可以批量的生成 Word 文档。
 
 按照上面的思路，我们首先编辑一个离职证明的模板文件，如下图所示。
@@ -174,7 +174,7 @@ for emp_dict in employees:
             run.text = run.text.replace(place_holder, emp_dict[key])
     # 每个人对应保存一个Word文档
     doc.save(f'{emp_dict["name"]}离职证明.docx')
-```python
+```
 执行上面的代码，会在当前路径下生成三个 Word 文档，如下图所示。
 
 <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210820004825.png" alt="image-20210820004825183" width="50%">
@@ -185,7 +185,7 @@ for emp_dict in employees:
 
 ```Bash
 pip install python-pptx
-```python
+```
 用 Python 操作 PowerPoint 的内容，因为实际应用场景不算很多，我不打算在这里进行赘述，有兴趣的读者可以自行阅读`python-pptx`的[官方文档](https://python-pptx.readthedocs.io/en/latest/)，下面仅展示一段来自于官方文档的代码。
 
 ```Python
@@ -228,7 +228,7 @@ p.level = 2
 
 # 保存幻灯片
 pres.save('test.pptx')
-```python
+```
 运行上面的代码，生成的 PowerPoint 文件如下图所示。
 
 <img src="https://ngte-superbed.oss-cn-beijing.aliyuncs.com/book/Python-100-Days/20210820010306.png" alt="image-20210820010306008" width="75%" />

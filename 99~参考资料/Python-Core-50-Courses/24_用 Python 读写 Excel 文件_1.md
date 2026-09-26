@@ -10,7 +10,7 @@ Python操作Excel需要三方库的支持，如果要兼容Excel 2007以前的�
 
 ```Bash
 pip install xlwt xlrd xlutils
-```python
+```
 ### 读Excel文件
 
 例如在当前文件夹下有一个名为“阿里巴巴2020年股票数据.xls”的Excel文件，如果想读取并显示该文件的内容，可以通过如下所示的代码来完成。
@@ -54,7 +54,7 @@ print(sheet.row_values(0))
 # 获取指定行指定列范围的数据（列表）
 # 第一个参数代表行索引，第二个和第三个参数代表列的开始（含）和结束（不含）索引
 print(sheet.row_slice(3, 0, 5))
-```python
+```
 > **提示**：上面代码中使用的Excel文件“阿里巴巴2020年股票数据.xls”可以通过后面的百度云盘地址进行获取。链接:https://pan.baidu.com/s/1rQujl5RQn9R7PadB2Z5g_g 提取码:e7b4。
 
 相信通过上面的代码，大家已经了解到了如何读取一个Excel文件，如果想知道更多关于`xlrd`模块的知识，可以阅读它的[官方文档](https://xlrd.readthedocs.io/en/latest/)。
@@ -85,7 +85,7 @@ for row in range(len(scores)):
         sheet.write(row + 1, col + 1, scores[row][col])
 # 保存Excel工作簿
 wb.save('考试成绩表.xls')
-```python
+```
 #### 调整单元格样式
 
 在写Excel文件时，我们还可以为单元格设置样式，主要包括字体（Font）、对齐方式（Alignment）、边框（Border）和背景（Background）的设置，`xlwt`对这几项设置都封装了对应的类来支持。要设置单元格样式需要首先创建一个`XFStyle`对象，再通过该对象的属性对字体、对齐方式、边框等进行设定，例如在上面的例子中，如果希望将表头单元格的背景色修改为黄色，可以按照如下的方式进行操作。
@@ -100,7 +100,7 @@ header_style.pattern = pattern
 titles = ('姓名', '语文', '数学', '英语')
 for index, title in enumerate(titles):
     sheet.write(0, index, title, header_style)
-```python
+```
 如果希望为表头设置指定的字体，可以使用`Font`类并添加如下所示的代码。
 
 ```Python
@@ -116,7 +116,7 @@ font.italic = False
 # 字体颜色
 font.colour_index = 1
 header_style.font = font
-```python
+```
 > **注意**：上面代码中指定的字体名（`font.name`）应当是本地系统有的字体，例如在我的电脑上有名为“华文楷体”的字体。
 
 如果希望表头垂直居中对齐，可以使用下面的代码进行设置。
@@ -128,7 +128,7 @@ align.vert = xlwt.Alignment.VERT_CENTER
 # 水平方向的对齐方式
 align.horz = xlwt.Alignment.HORZ_CENTER
 header_style.alignment = align
-```python
+```
 如果希望给表头加上黄色的虚线边框，可以使用下面的代码来设置。
 
 ```Python
@@ -143,7 +143,7 @@ for position, color in props:
     setattr(borders, position, xlwt.Borders.DASHED)
     setattr(borders, color, 5)
 header_style.borders = borders
-```python
+```
 如果要调整单元格的宽度（列宽）和表头的高度（行高），可以按照下面的代码进行操作。
 
 ```Python
@@ -155,7 +155,7 @@ for index, title in enumerate(titles):
     sheet.col(index).width = 20 * 200
     # 设置单元格的数据和样式
     sheet.write(0, index, title, header_style)
-```python
+```
 #### 公式计算
 
 对于前面打开的“阿里巴巴2020年股票数据.xls”文件，如果要统计全年收盘价（Close字段）的平均值以及全年交易量（Volume字段）的总和，可以使用Excel的公式计算即可。我们可以先使用`xlrd`读取Excel文件夹，然后通过`xlutils`三方库提供的`copy`函数将读取到的Excel文件转成`Workbook`对象进行写操作，在调用`write`方法时，可以将一个`Formula`对象写入单元格。
@@ -175,7 +175,7 @@ sheet2 = wb_for_write.get_sheet(0)
 sheet2.write(nrows, 4, xlwt.Formula(f'average(E2:E{nrows})'))
 sheet2.write(nrows, 6, xlwt.Formula(f'sum(G2:G{nrows})'))
 wb_for_write.save('阿里巴巴2020年股票数据汇总.xls')
-```python
+```
 > **说明**：上面的代码有一些小瑕疵，有兴趣的读者可以自行探索并思考如何解决。
 
 ###  简单的总结

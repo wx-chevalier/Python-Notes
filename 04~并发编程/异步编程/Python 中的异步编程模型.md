@@ -32,7 +32,7 @@ def task():
 t = threading.Thread(target=task)
 t.start()
 t.join()
-```python
+```
 ---
 
 ### 2.2 多进程（multiprocessing）
@@ -65,7 +65,7 @@ def task():
 p = Process(target=task)
 p.start()
 p.join()
-```python
+```
 ---
 
 ### 2.3 协程（coroutine）
@@ -96,7 +96,7 @@ async def task():
     print("协程任务执行中")
 
 asyncio.run(task())
-```python
+```
 ---
 
 ### 2.4 对比总结

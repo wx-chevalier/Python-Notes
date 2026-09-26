@@ -43,7 +43,7 @@
 1
 >>> a[1]
 2
-```python
+```
 注意到，-1 则代表序列的最后一个元素，-2 代表倒数第二个元素，以此类推。
 
 ## 分片
@@ -62,7 +62,7 @@
 >>> a = (2, 4, 6, 8, 10)           # 元组分片
 >>> a[2:4]
 (6, 8)
-```python
+```
 这里需要特别注意的是，分片有两个索引，第 1 个索引的元素是包含在内的，而第 2 个元素的索引则不包含在内，也就是说，numbers[2:5] 获取的是 numbers[2], numbers[3], numbers[4]，没有包括 numbers[5]。下面列举使用分片的一些技巧。
 
 - 访问最后几个元素
@@ -73,7 +73,7 @@
 >>> numbers = [1, 2, 3, 4, 5, 6]
 >>> numbers[3:6]
 [4, 5, 6]
-```python
+```
 有没有更简洁的方法呢？想到可以使用负数形式的索引，你可能会尝试这样做：
 
 ```python
@@ -82,7 +82,7 @@
 [4, 5]
 >>> numbers[-3:0]       # 左边索引的元素比右边索引出现得晚，返回空序列
 []
-```python
+```
 上面的两种使用方式并不能正确获取序列的最后 3 个元素，Python 提供了一个捷径：
 
 ```python
@@ -91,7 +91,7 @@
 [6, 7, 8]
 >>> numbers[5:]
 [6, 7, 8]
-```python
+```
 也就是说，如果希望分片包含最后一个元素，可将第 2 个索引置为空。如果要复制整个序列，可以将两个索引都置为空：
 
 ```python
@@ -99,7 +99,7 @@
 >>> nums = numbers[:]
 >>> nums
 [1, 2, 3, 4, 5, 6, 7, 8]
-```python
+```
 - 使用步长
 
 使用分片的时候，步长默认是 1，即逐个访问，我们也可以自定义步长，比如：
@@ -114,7 +114,7 @@
 [1, 3]
 >>> numbers[::3]      # 等价于 numbers[0:8:3]，取出索引为 0, 3, 6 的元素
 [1, 4, 7]
-```python
+```
 另外，步长也可以是负数，表示从右到左取元素：
 
 ```python
@@ -133,13 +133,13 @@
 [7, 5, 3, 1]
 >>> numbers[:6:-2]        # 取出索引为 7 的元素
 [8]
-```python
+```
 这里总结一下使用分片操作的一些方法，分片的使用形式是：
 
 ```python
 # 左索引:右索引:步长
 left_index:right_index:step
-```python
+```
 要牢牢记住的是：
 
 - 左边索引的元素包括在结果之中，右边索引的元素不包括在结果之中；
@@ -161,7 +161,7 @@ left_index:right_index:step
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 TypeError: can only concatenate list (not "str") to list
-```python
+```
 这里需要注意的是：两种相同类型的序列才能加法操作。
 
 ## 乘
@@ -175,7 +175,7 @@ TypeError: can only concatenate list (not "str") to list
 [0, 0, 0]
 >>> [1, 2, 3] * 3
 [1, 2, 3, 1, 2, 3, 1, 2, 3]
-```python
+```
 ## in
 
 为了检查一个值是否在序列中，可以使用 `in` 运算符，比如：
@@ -187,7 +187,7 @@ True
 False
 >>> 10 in [6, 8, 10]
 True
-```python
+```
 # map/reduce/filter
 
 map/reduce/filter 是 Python 中较为常用的内建高阶函数，它们为函数式编程提供了不少便利。
@@ -198,12 +198,12 @@ map/reduce/filter 是 Python 中较为常用的内建高阶函数，它们为函
 
 ```python
 map(function, sequence)
-```python
+```
 对 sequence 中的 item 依次执行 function(item)，并将结果组成一个 List 返回，也就是：
 
 ```python
 [function(item1), function(item2), function(item3), ...]
-```python
+```
 ```py
 >>> def square(x):
 ...     return x * x
@@ -238,7 +238,7 @@ print value
 
 # output
 [8, 12, 16]
-```python
+```
 上面的代码中，我们加了 list 转换，是为了兼容 Python3，在 Python2 中 map 直接返回列表，Python3 中返回迭代器。
 
 ## reduce
@@ -247,12 +247,12 @@ print value
 
 ```python
 reduce(function, sequence[, initial])
-```python
+```
 先将 sequence 的前两个 item 传给 function，即 function(item1, item2)，函数的返回值和 sequence 的下一个 item 再传给 function，即 function(function(item1, item2), item3)，如此迭代，直到 sequence 没有元素，如果有 initial，则作为初始值调用。也就是说：
 
 ```python
 reduece(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
-```python
+```
 看一些例子，就能很快理解了。
 
 ```python
@@ -269,14 +269,14 @@ reduece(f, [x1, x2, x3, x4]) = f(f(f(x1, x2), x3), x4)
 >>> f = lambda a, b: a if (a > b) else b   # 两两比较，取最大值
 >>> reduce(f, [5, 8, 1, 10])
 10
-```python
+```
 ## filter
 
 `filter` 函数用于过滤元素，它的使用形式如下：
 
 ```python
 filter(function, sequnce)
-```python
+```
 将 function 依次作用于 sequnce 的每个 item，即 function(item)，将返回值为 True 的 item 组成一个 List/String/Tuple (取决于 sequnce 的类型，python3 统一返回迭代器) 返回。
 
 ```python
@@ -290,4 +290,4 @@ filter(function, sequnce)
 'ac'        # python2
 >>> filter(lambda x: x < 'g', 'hijack')
 <filter object at 0x1034b4080>   # python3
-```python
+```
